@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(npm --version)",
+      "Bash(cargo --version)",
+      "Bash(npm install:*)",
+      "Bash(gws --version)",
+      "Bash(echo $APPDATA)",
+      "Bash(echo $HOME)",
+      "Bash(gws auth:*)",
+      "Bash(gws drive:*)",
+      "Bash(gws --help)",
+      "Bash(gws gmail:*)",
+      "Bash(gws calendar:*)",
+      "Bash(powershell.exe -Command \"gws drive files list --params ''{\"\"pageSize\"\": 3}''\")",
+      "Bash(powershell.exe -Command \"gws auth export\")",
+      "Bash(npm:*)",
+      "Bash(npx create-next-app@latest:*)"
+    ]
+  }
+}
