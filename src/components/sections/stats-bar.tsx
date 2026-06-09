@@ -17,8 +17,8 @@ export function StatsBar({ dict }: StatsBarProps) {
   ];
 
   return (
-    <Section className="py-16 border-y border-border bg-section">
-      <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+    <Section className="py-16 md:py-20 bg-foreground text-white">
+      <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:divide-x md:divide-white/10">
         {stats.map((stat) => (
           <AnimatedCounter key={stat.label} {...stat} />
         ))}

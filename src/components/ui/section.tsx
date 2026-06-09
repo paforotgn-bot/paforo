@@ -26,6 +26,12 @@ interface SectionHeaderProps {
 export function SectionHeader({ title, subtitle, className, align = 'center' }: SectionHeaderProps) {
   return (
     <div className={cn('mb-16', align === 'center' && 'text-center', className)}>
+      {align === 'center' && (
+        <div className="flex justify-center mb-6">
+          <div className="section-gradient-line" />
+        </div>
+      )}
+      {align === 'left' && <div className="section-gradient-line mb-6" />}
       <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{title}</h2>
       {subtitle && (
         <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">{subtitle}</p>

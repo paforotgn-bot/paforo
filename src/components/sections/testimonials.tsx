@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { Section, SectionHeader } from '@/components/ui/section';
-import { Card } from '@/components/ui/card';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import type { Dictionary, Testimonial } from '@/types';
 
@@ -31,6 +30,12 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+const accentColors = [
+  'border-l-violet',
+  'border-l-cyan',
+  'border-l-violet',
+];
+
 export function Testimonials({ dict }: TestimonialsProps) {
   return (
     <Section className="bg-section">
@@ -45,18 +50,18 @@ export function Testimonials({ dict }: TestimonialsProps) {
       >
         {testimonials.map((t, i) => (
           <motion.div key={t.name} variants={fadeInUp}>
-            <Card className="h-full flex flex-col">
+            <div className={`h-full flex flex-col rounded-2xl border border-border bg-background p-6 border-l-4 ${accentColors[i]} card-glow transition-all duration-300 hover:border-violet/25`}>
               <div className="flex-1">
-                <div className="text-violet text-3xl mb-4">&ldquo;</div>
-                <p className="text-sm leading-relaxed text-muted">{t.quote}</p>
+                <div className="text-violet/30 text-5xl font-serif leading-none mb-3">&ldquo;</div>
+                <p className="text-foreground/80 leading-relaxed">{t.quote}</p>
               </div>
               <div className="mt-6 pt-4 border-t border-border">
-                <p className="font-medium text-sm">{t.name}</p>
-                <p className="text-xs text-muted">
+                <p className="font-semibold">{t.name}</p>
+                <p className="text-sm text-muted">
                   {t.role}, {t.company}
                 </p>
               </div>
-            </Card>
+            </div>
           </motion.div>
         ))}
       </motion.div>

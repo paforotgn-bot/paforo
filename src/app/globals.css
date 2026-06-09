@@ -4,7 +4,7 @@
 @theme inline {
   --color-background: #FFFFFF;
   --color-foreground: #111827;
-  --color-muted: #6B7280;
+  --color-muted: #4B5563;
   --color-card: #F9FAFB;
   --color-elevated: #F3F4F6;
   --color-border: #E5E7EB;
@@ -12,7 +12,7 @@
   --color-cyan: #0891B2;
   --color-violet-dark: #6D28D9;
   --color-cyan-dark: #0E7490;
-  --color-section: #F9FAFB;
+  --color-section: #F5F3FF;
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
@@ -50,10 +50,19 @@ body {
 
 /* Card hover glow */
 .card-glow {
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 .card-glow:hover {
-  box-shadow: 0 4px 24px rgba(124, 58, 237, 0.08), 0 0 40px rgba(8, 145, 178, 0.04);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.12), 0 0 48px rgba(8, 145, 178, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Section gradient accents */
+.section-gradient-line {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(135deg, #7C3AED, #0891B2);
+  border-radius: 2px;
 }
 
 /* Selection */

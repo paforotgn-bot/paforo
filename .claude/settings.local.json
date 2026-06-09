@@ -16,7 +16,26 @@
       "Bash(powershell.exe -Command \"gws drive files list --params ''{\"\"pageSize\"\": 3}''\")",
       "Bash(powershell.exe -Command \"gws auth export\")",
       "Bash(npm:*)",
-      "Bash(npx create-next-app@latest:*)"
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "WebSearch",
+      "Bash(taskkill:*)",
+      "Bash(curl:*)",
+      "Bash(tasklist:*)",
+      "Bash(netstat:*)",
+      "Bash(cmd:*)",
+      "Bash(xargs grep:*)",
+      "Bash(wc:*)",
+      "WebFetch(domain:developer.ideogram.ai)",
+      "Bash(npx next:*)",
+      "Bash(node:*)",
+      "Bash(npx tsx:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(npx vercel:*)",
+      "Bash(npx puppeteer:*)",
+      "Bash(NODE_PATH=\"C:\\\\Users\\\\pafor\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\" node:*)"
     ]
   }
 }

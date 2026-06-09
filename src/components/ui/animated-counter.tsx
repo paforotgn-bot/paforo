@@ -20,7 +20,7 @@ export function AnimatedCounter({
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   useEffect(() => {
     if (!isInView) return;
@@ -48,14 +48,14 @@ export function AnimatedCounter({
       transition={{ duration: 0.5 }}
       className="text-center"
     >
-      <div className="font-mono text-4xl font-bold md:text-5xl">
+      <div className="font-mono text-4xl font-bold md:text-5xl lg:text-6xl">
         <span className="gradient-text">
           {prefix}
           {count}
           {suffix}
         </span>
       </div>
-      <p className="mt-2 text-sm text-muted">{label}</p>
+      <p className="mt-3 text-sm text-white/60 uppercase tracking-wider">{label}</p>
     </motion.div>
   );
 }

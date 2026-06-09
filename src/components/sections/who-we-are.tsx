@@ -22,17 +22,20 @@ export function WhoWeAre({ locale, dict }: WhoWeAreProps) {
         transition={fadeInUp.transition}
         className="mx-auto max-w-3xl text-center"
       >
+        <div className="flex justify-center mb-6">
+          <div className="section-gradient-line" />
+        </div>
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
           {dict.whoWeAre.title}
         </h2>
-        <p className="mt-6 text-lg text-muted leading-relaxed">
+        <p className="mt-6 text-lg text-foreground/70 leading-relaxed">
           {dict.whoWeAre.text}
         </p>
-        <p className="mt-4 text-lg text-muted leading-relaxed">
+        <p className="mt-4 text-lg text-foreground/70 leading-relaxed">
           {dict.whoWeAre.text2}
         </p>
-        <div className="mt-8">
-          <Button href={`/${locale}/nosotros`} variant="secondary">
+        <div className="mt-10">
+          <Button href={`/${locale}/nosotros`} variant="primary">
             {dict.whoWeAre.cta} →
           </Button>
         </div>

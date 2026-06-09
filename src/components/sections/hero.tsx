@@ -52,16 +52,17 @@ export function Hero({ locale, dict }: HeroProps) {
             variants={fadeInUp}
             className="mt-8 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            {dict.hero.title}{' '}
+            {dict.hero.title}
+            <br />
             <span className="gradient-text">
               {dict.hero.titleHighlight}
               <AnimatePresence mode="wait">
                 <motion.span
                   key={words[wordIndex]}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
+                  initial={{ opacity: 0, filter: 'blur(8px)' }}
+                  animate={{ opacity: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, filter: 'blur(8px)' }}
+                  transition={{ duration: 0.4 }}
                   className="inline-block"
                 >
                   {words[wordIndex]}
@@ -72,7 +73,7 @@ export function Hero({ locale, dict }: HeroProps) {
 
           <motion.p
             variants={fadeInUp}
-            className="mt-6 text-lg text-muted max-w-2xl mx-auto md:text-xl"
+            className="mt-6 text-lg text-foreground/70 max-w-2xl mx-auto md:text-xl leading-relaxed"
           >
             {dict.hero.subtitle}
           </motion.p>

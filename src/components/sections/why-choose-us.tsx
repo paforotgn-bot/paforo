@@ -11,7 +11,7 @@ interface WhyChooseUsProps {
 
 export function WhyChooseUs({ dict }: WhyChooseUsProps) {
   return (
-    <Section className="bg-section">
+    <Section className="bg-foreground text-white overflow-hidden">
       <SectionHeader
         title={dict.about.iaTitle}
         subtitle={dict.about.iaSubtitle}
@@ -22,24 +22,26 @@ export function WhyChooseUs({ dict }: WhyChooseUsProps) {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="mx-auto max-w-3xl space-y-4"
+        className="mx-auto max-w-4xl space-y-5"
       >
         {dict.about.iaItems.map((item, i) => (
           <motion.div
             key={i}
             variants={fadeInUp}
-            className="grid grid-cols-[1fr_auto_1fr] items-center gap-4"
+            className="grid grid-cols-[1fr_auto_1fr] items-stretch gap-4 md:gap-6"
           >
-            <div className="rounded-lg border border-red-200 bg-red-50 p-4">
-              <p className="text-sm text-red-700">
-                <span className="text-red-400 mr-2">Antes:</span>
+            <div className="rounded-xl border border-red-500/20 bg-red-500/10 p-5 flex items-center">
+              <p className="text-sm text-red-300 leading-relaxed">
+                <span className="block text-xs uppercase tracking-wider text-red-400/60 mb-1 font-semibold">Antes</span>
                 {item.before}
               </p>
             </div>
-            <span className="text-xl font-bold gradient-text">→</span>
-            <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-4">
-              <p className="text-sm text-emerald-800">
-                <span className="text-emerald-500 mr-2">Hoy:</span>
+            <div className="flex items-center">
+              <span className="text-2xl font-bold gradient-text">→</span>
+            </div>
+            <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-5 flex items-center">
+              <p className="text-sm text-emerald-300 leading-relaxed">
+                <span className="block text-xs uppercase tracking-wider text-emerald-400/60 mb-1 font-semibold">Hoy</span>
                 {item.after}
               </p>
             </div>
@@ -52,7 +54,7 @@ export function WhyChooseUs({ dict }: WhyChooseUsProps) {
         whileInView={fadeInUp.animate}
         viewport={{ once: true }}
         transition={fadeInUp.transition}
-        className="mx-auto max-w-2xl text-center text-muted mt-10 leading-relaxed"
+        className="mx-auto max-w-2xl text-center text-white/60 mt-12 leading-relaxed"
       >
         {dict.about.iaClosing}
       </motion.p>

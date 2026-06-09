@@ -15,24 +15,31 @@ export function FAQ({ title = 'Preguntas frecuentes', subtitle, faqs }: FAQProps
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <Section>
+    <Section className="bg-section">
       <SectionHeader title={title} subtitle={subtitle} />
 
       <div className="mx-auto max-w-3xl space-y-3">
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className="rounded-xl border border-border bg-white overflow-hidden"
+            className={cn(
+              'rounded-xl border bg-white overflow-hidden transition-all duration-300',
+              openIndex === i
+                ? 'border-violet/30 shadow-[0_4px_24px_rgba(124,58,237,0.08)]'
+                : 'border-border hover:border-violet/20'
+            )}
           >
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
               className="flex w-full items-center justify-between p-5 text-left"
             >
-              <span className="font-medium pr-4">{faq.question}</span>
+              <span className="font-semibold pr-4">{faq.question}</span>
               <span
                 className={cn(
-                  'text-muted transition-transform duration-200 shrink-0',
-                  openIndex === i && 'rotate-45'
+                  'flex items-center justify-center h-7 w-7 rounded-full text-sm shrink-0 transition-all duration-200',
+                  openIndex === i
+                    ? 'bg-violet text-white rotate-45'
+                    : 'bg-elevated text-muted'
                 )}
               >
                 +
@@ -46,7 +53,7 @@ export function FAQ({ title = 'Preguntas frecuentes', subtitle, faqs }: FAQProps
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <p className="px-5 pb-5 text-sm text-muted leading-relaxed">
+                  <p className="px-5 pb-5 text-foreground/70 leading-relaxed">
                     {faq.answer}
                   </p>
                 </motion.div>

@@ -70,8 +70,8 @@ export function CasesShowcase({ locale, dict }: CasesShowcaseProps) {
                 ))}
               </div>
 
-              <span className="inline-flex items-center gap-1 text-sm font-semibold text-violet hover:underline">
-                Descubre cómo lo hicimos →
+              <span className="inline-flex items-center gap-1 text-sm font-semibold text-violet hover:underline transition-colors">
+                {dict.cases.cta} →
               </span>
             </GlowCard>
           </Link>
