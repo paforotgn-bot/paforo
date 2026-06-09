@@ -8,7 +8,6 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumbs } from '@/components/seo/breadcrumbs';
 import { Container } from '@/components/ui/container';
 import { Section, SectionHeader } from '@/components/ui/section';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { GlowCard } from '@/components/ui/glow-card';
 import { AuroraBackground } from '@/components/ui/aurora-background';
@@ -76,8 +75,7 @@ export default async function ServicePage({ params }: { params: Promise<{ locale
           />
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <Badge variant="violet">{service.title}</Badge>
-              <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
                 {service.heroTitle}
               </h1>
               <p className="mt-4 text-lg text-muted max-w-2xl">{service.heroSubtitle}</p>
