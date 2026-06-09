@@ -22,7 +22,7 @@ const logos = [
 
 export function LogosBar({ dict }: LogosBarProps) {
   return (
-    <Section className="py-12 md:py-16 border-b border-border">
+    <Section className="py-12 md:py-16 bg-foreground">
       <motion.div
         initial={fadeInUp.initial}
         whileInView={fadeInUp.animate}
@@ -30,14 +30,14 @@ export function LogosBar({ dict }: LogosBarProps) {
         transition={fadeInUp.transition}
         className="text-center"
       >
-        <p className="text-sm font-medium text-muted uppercase tracking-wider mb-10">
+        <p className="text-sm font-medium text-white/50 uppercase tracking-wider mb-10">
           {dict.logos.title}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+        <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
           {logos.map((logo) => (
             <div
               key={logo.name}
-              className="relative h-8 w-28 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              className="relative h-10 w-36 opacity-60 hover:opacity-100 brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300"
             >
               <Image
                 src={logo.src}

@@ -137,6 +137,12 @@ export interface Dictionary {
     error: string;
     selectService: string;
   };
+  whoWeAre: {
+    title: string;
+    text: string;
+    text2: string;
+    cta: string;
+  };
   logos: {
     title: string;
   };

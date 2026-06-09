@@ -17,6 +17,12 @@
     "cta1": "Veure serveis",
     "cta2": "Contactar"
   },
+  "whoWeAre": {
+    "title": "Per què fem el que fem",
+    "text": "Creiem que la tecnologia hauria de ser un igualador. Que una empresa de 5 persones pugui competir amb una de 50. Que les eines que abans només podien permetre's les grans corporacions estiguin a l'abast de qualsevol.",
+    "text2": "Per això vam crear Paforo: per ajudar a negocis reals a estalviar temps, automatitzar el repetitiu i centrar-se en el que de veritat importa — els seus clients, el seu equip, el seu creixement.",
+    "cta": "Coneix la nostra història"
+  },
   "stats": {
     "projects": "Projectes lliurats",
     "satisfaction": "Satisfacció del client",

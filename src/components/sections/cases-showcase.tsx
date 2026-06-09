@@ -26,6 +26,16 @@ const featuredCases = [
       { label: 'Horas ahorradas', value: '2h/día' },
     ],
   },
+  {
+    slug: 'formulario-inscripciones',
+    title: 'Formulario de inscripciones online',
+    client: 'Asociación deportiva',
+    services: ['Desarrollo Web', 'Automatizaciones'],
+    results: [
+      { label: 'Papeleo eliminado', value: '100%' },
+      { label: 'Tiempo de gestión', value: '-80%' },
+    ],
+  },
 ];
 
 export function CasesShowcase({ locale, dict }: CasesShowcaseProps) {

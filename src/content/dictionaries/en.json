@@ -17,6 +17,12 @@
     "cta1": "View services",
     "cta2": "Contact us"
   },
+  "whoWeAre": {
+    "title": "Why we do what we do",
+    "text": "We believe technology should be an equalizer. That a 5-person company can compete with a 50-person one. That the tools once reserved for big corporations should be within anyone's reach.",
+    "text2": "That's why we created Paforo: to help real businesses save time, automate the repetitive stuff and focus on what truly matters — their clients, their team, their growth.",
+    "cta": "Learn our story"
+  },
   "stats": {
     "projects": "Projects delivered",
     "satisfaction": "Client satisfaction",
