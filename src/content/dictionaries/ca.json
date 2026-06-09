@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Inici",
+    "services": "Serveis",
+    "cases": "Casos d'èxit",
+    "blog": "Blog",
+    "about": "Sobre nosaltres",
+    "contact": "Contacte",
+    "cta": "Començar projecte"
+  },
+  "hero": {
+    "badge": "Agència digital a Tarragona",
+    "title": "Solucions digitals que",
+    "titleHighlight": "impulsen el teu negoci",
+    "subtitle": "Ajudem a empreses a créixer amb desenvolupament web, software a mida, automatització de processos i estratègies de posicionament. Més resultats, menys temps.",
+    "cta1": "Veure serveis",
+    "cta2": "Contactar"
+  },
+  "stats": {
+    "projects": "Projectes lliurats",
+    "satisfaction": "Satisfacció del client",
+    "traffic": "Augment mitjà de tràfic",
+    "experience": "Anys d'experiència"
+  },
+  "services": {
+    "title": "Els nostres serveis",
+    "subtitle": "Solucions integrals per impulsar la teva presència digital i optimitzar els teus processos de negoci.",
+    "cta": "Més informació",
+    "seo": {
+      "title": "SEO",
+      "description": "Posicionem el teu web als primers resultats de Google amb estratègies de SEO tècnic, contingut i link building."
+    },
+    "geo": {
+      "title": "GEO (IA)",
+      "description": "Posiciona la teva marca a ChatGPT, Google AI Overviews, Perplexity i altres motors d'IA generativa."
+    },
+    "web": {
+      "title": "Desenvolupament Web",
+      "description": "Webs ràpides, accessibles i optimitzades per a conversió. Next.js, React i les millors tecnologies."
+    },
+    "software": {
+      "title": "Desenvolupament Software",
+      "description": "Software a mida per automatitzar i escalar el teu negoci. APIs, dashboards, integracions."
+    },
+    "digital": {
+      "title": "Solucions Digitals",
+      "description": "Transformació digital integral: des de l'estratègia fins a la implementació tecnològica."
+    },
+    "automation": {
+      "title": "Automatitzacions",
+      "description": "Automatitza processos repetitius i allibera temps per al que importa. Workflows, bots, integracions."
+    }
+  },
+  "cases": {
+    "title": "Casos d'èxit",
+    "subtitle": "Resultats reals de clients reals. Descobreix com hem ajudat a empreses com la teva.",
+    "cta": "Veure cas complet",
+    "viewAll": "Veure tots els casos"
+  },
+  "process": {
+    "title": "Com treballem",
+    "subtitle": "Sense voltes. Entenem el teu negoci, executem ràpid i mesurem tot.",
+    "steps": [
+      {
+        "title": "T'escoltem",
+        "description": "Ens asseiem amb tu, entenem què necessites i quin problema real estem resolent. Sense argot, sense fum."
+      },
+      {
+        "title": "Proposem un pla clar",
+        "description": "Et presentem què farem, amb quins terminis i quins resultats esperar. Si no té sentit, t'ho diem."
+      },
+      {
+        "title": "Construïm i llancem",
+        "description": "Desenvolupament iteratiu amb lliuraments cada setmana. Veus el progrés en temps real i pots donar feedback a cada sprint."
+      },
+      {
+        "title": "Mesurem i millorem",
+        "description": "Després del llançament, mesurem l'impacte real. Dades, no suposicions. I seguim optimitzant."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Què diuen els nostres clients",
+    "subtitle": "La satisfacció dels nostres clients és la nostra millor carta de presentació."
+  },
+  "cta": {
+    "title": "Preparat per créixer?",
+    "subtitle": "Parlem de com podem impulsar el teu negoci amb solucions digitals a mida.",
+    "button": "Contactar ara"
+  },
+  "footer": {
+    "description": "Agència de solucions digitals a Tarragona. Desenvolupament web, software a mida, automatització de processos, SEO i GEO.",
+    "services": "Serveis",
+    "company": "Empresa",
+    "legal": "Legal",
+    "privacy": "Política de privacitat",
+    "terms": "Termes i condicions",
+    "cookies": "Política de cookies",
+    "rights": "Tots els drets reservats."
+  },
+  "contact": {
+    "title": "Contacta amb nosaltres",
+    "subtitle": "Explica'ns el teu projecte i et respondrem en menys de 24 hores.",
+    "name": "Nom",
+    "email": "Email",
+    "company": "Empresa",
+    "phone": "Telèfon",
+    "service": "Servei d'interès",
+    "message": "Missatge",
+    "submit": "Enviar missatge",
+    "success": "Missatge enviat correctament. Et contactarem aviat.",
+    "error": "Error en enviar el missatge. Torna-ho a intentar.",
+    "selectService": "Selecciona un servei"
+  },
+  "about": {
+    "title": "Sobre Paforo",
+    "subtitle": "Som una agència digital a Tarragona especialitzada en ajudar a empreses a créixer al món digital.",
+    "mission": "La nostra missió",
+    "missionText": "Democratitzar l'accés a solucions digitals de qualitat per a empreses mitjanes, combinant tecnologia d'avantguarda amb estratègies provades de creixement.",
+    "iaTitle": "Solucions que abans eren impensables",
+    "iaSubtitle": "La IA ha canviat les regles del joc. El que abans només les grans corporacions podien permetre's, avui està a l'abast de qualsevol empresa.",
+    "iaItems": [
+      { "before": "Un equip de 10 persones per gestionar trucades", "after": "Una bústia de veu amb IA que transcriu i respon per tu" },
+      { "before": "Software a mida per centenars de milers d'euros", "after": "Solucions personalitzades accessibles per a pimes" },
+      { "before": "Departaments sencers de màrqueting digital", "after": "Automatitzacions intel·ligents que treballen 24/7" },
+      { "before": "Mesos d'anàlisi per prendre una decisió", "after": "Dades en temps real per actuar al moment" }
+    ],
+    "iaClosing": "A Paforo creiem que la tecnologia ha de ser un igualador. Que una empresa de 5 persones pugui competir amb una de 50. I que les persones haurien de dedicar el seu temps al que importa de veritat: crear vincles, cuidar els seus clients i fer créixer el seu negoci. La feina repetitiva, avorrida i mecànica, que la faci la tecnologia.",
+    "values": "Els nostres valors",
+    "valuesItems": [
+      { "title": "Resultats", "description": "Ens enfoquem en mètriques reals i ROI mesurable." },
+      { "title": "Transparència", "description": "Comunicació clara i informes detallats." },
+      { "title": "Innovació", "description": "Tecnologies d'avantguarda aplicades amb criteri." },
+      { "title": "Compromís", "description": "El teu èxit és el nostre èxit." }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles, guies i recursos sobre SEO, desenvolupament web i màrqueting digital.",
+    "readMore": "Llegir més",
+    "readTime": "min de lectura"
+  },
+  "common": {
+    "learnMore": "Saber més",
+    "backHome": "Tornar a l'inici",
+    "loading": "Carregant..."
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "cases": "Case Studies",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start a project"
+  },
+  "hero": {
+    "badge": "Digital agency in Tarragona",
+    "title": "Digital solutions that",
+    "titleHighlight": "drive your business",
+    "subtitle": "We help businesses grow with web development, custom software, process automation and positioning strategies. More results, less time.",
+    "cta1": "View services",
+    "cta2": "Contact us"
+  },
+  "stats": {
+    "projects": "Projects delivered",
+    "satisfaction": "Client satisfaction",
+    "traffic": "Average traffic increase",
+    "experience": "Years of experience"
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "Comprehensive solutions to boost your digital presence and optimize your business processes.",
+    "cta": "Learn more",
+    "seo": {
+      "title": "SEO",
+      "description": "We rank your website in Google's top results with technical SEO, content and link building strategies."
+    },
+    "geo": {
+      "title": "GEO (AI)",
+      "description": "Position your brand in ChatGPT, Google AI Overviews, Perplexity and other generative AI engines."
+    },
+    "web": {
+      "title": "Web Development",
+      "description": "Fast, accessible and conversion-optimized websites. Next.js, React and cutting-edge technologies."
+    },
+    "software": {
+      "title": "Software Development",
+      "description": "Custom software to automate and scale your business. APIs, dashboards, integrations."
+    },
+    "digital": {
+      "title": "Digital Solutions",
+      "description": "End-to-end digital transformation: from strategy to technology implementation."
+    },
+    "automation": {
+      "title": "Automations",
+      "description": "Automate repetitive processes and free up time for what matters. Workflows, bots, integrations."
+    }
+  },
+  "cases": {
+    "title": "Case Studies",
+    "subtitle": "Real results from real clients. Discover how we've helped businesses like yours.",
+    "cta": "View full case",
+    "viewAll": "View all cases"
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "No fluff. We understand your business, execute fast and measure everything.",
+    "steps": [
+      {
+        "title": "We listen",
+        "description": "We sit down with you, understand what you need and what real problem we're solving. No jargon, no smoke."
+      },
+      {
+        "title": "We propose a clear plan",
+        "description": "We present what we'll do, with what timelines and what results to expect. If it doesn't make sense, we tell you."
+      },
+      {
+        "title": "We build and launch",
+        "description": "Iterative development with weekly deliveries. You see progress in real time and can give feedback every sprint."
+      },
+      {
+        "title": "We measure and improve",
+        "description": "After launch, we measure the real impact. Data, not assumptions. And we keep optimizing."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "subtitle": "Our clients' satisfaction is our best introduction."
+  },
+  "cta": {
+    "title": "Ready to grow?",
+    "subtitle": "Let's talk about how we can boost your business with tailored digital solutions.",
+    "button": "Contact us now"
+  },
+  "footer": {
+    "description": "Digital solutions agency in Tarragona. Web development, custom software, process automation, SEO and GEO.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "cookies": "Cookie Policy",
+    "rights": "All rights reserved."
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Tell us about your project and we'll get back to you within 24 hours.",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "phone": "Phone",
+    "service": "Service of interest",
+    "message": "Message",
+    "submit": "Send message",
+    "success": "Message sent successfully. We'll contact you soon.",
+    "error": "Error sending message. Please try again.",
+    "selectService": "Select a service"
+  },
+  "about": {
+    "title": "About Paforo",
+    "subtitle": "We are a digital agency in Tarragona specialized in helping businesses grow in the digital world.",
+    "mission": "Our mission",
+    "missionText": "Democratize access to quality digital solutions for mid-sized companies, combining cutting-edge technology with proven growth strategies.",
+    "iaTitle": "Solutions that were once unthinkable",
+    "iaSubtitle": "AI has changed the game. What only large corporations could afford is now within reach of any business.",
+    "iaItems": [
+      { "before": "A team of 10 people to handle phone calls", "after": "An AI voicemail that transcribes and replies for you" },
+      { "before": "Custom software costing hundreds of thousands", "after": "Affordable personalized solutions for SMBs" },
+      { "before": "Entire digital marketing departments", "after": "Smart automations that work 24/7" },
+      { "before": "Months of analysis to make a decision", "after": "Real-time data to act immediately" }
+    ],
+    "iaClosing": "At Paforo we believe technology should be an equalizer. That a 5-person company can compete with a 50-person one. And that people should spend their time on what truly matters: building real connections, taking care of their clients and growing their business. The repetitive, boring, mechanical work? Let technology handle that.",
+    "values": "Our values",
+    "valuesItems": [
+      { "title": "Results", "description": "We focus on real metrics and measurable ROI." },
+      { "title": "Transparency", "description": "Clear communication and detailed reports." },
+      { "title": "Innovation", "description": "Cutting-edge technologies applied with purpose." },
+      { "title": "Commitment", "description": "Your success is our success." }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles, guides and resources about SEO, web development and digital marketing.",
+    "readMore": "Read more",
+    "readTime": "min read"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "backHome": "Back to home",
+    "loading": "Loading..."
+  }
+}

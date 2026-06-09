@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "cases": "Casos de éxito",
+    "blog": "Blog",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cta": "Empezar proyecto"
+  },
+  "hero": {
+    "badge": "Agencia digital en Tarragona",
+    "title": "Soluciones digitales que",
+    "titleHighlight": "impulsan tu negocio",
+    "subtitle": "Ayudamos a empresas a crecer con desarrollo web, software a medida, automatización de procesos y estrategias de posicionamiento. Más resultados, menos tiempo.",
+    "cta1": "Ver servicios",
+    "cta2": "Contactar"
+  },
+  "stats": {
+    "projects": "Proyectos entregados",
+    "satisfaction": "Satisfacción del cliente",
+    "traffic": "Aumento medio de tráfico",
+    "experience": "Años de experiencia"
+  },
+  "services": {
+    "title": "Nuestros servicios",
+    "subtitle": "Soluciones integrales para impulsar tu presencia digital y optimizar tus procesos de negocio.",
+    "cta": "Más información",
+    "seo": {
+      "title": "SEO",
+      "description": "Posicionamos tu web en los primeros resultados de Google con estrategias de SEO técnico, contenido y link building."
+    },
+    "geo": {
+      "title": "GEO (IA)",
+      "description": "Posiciona tu marca en ChatGPT, Google AI Overviews, Perplexity y otros motores de IA generativa."
+    },
+    "web": {
+      "title": "Desarrollo Web",
+      "description": "Webs rápidas, accesibles y optimizadas para conversión. Next.js, React y las mejores tecnologías."
+    },
+    "software": {
+      "title": "Desarrollo Software",
+      "description": "Software a medida para automatizar y escalar tu negocio. APIs, dashboards, integraciones."
+    },
+    "digital": {
+      "title": "Soluciones Digitales",
+      "description": "Transformación digital integral: desde la estrategia hasta la implementación tecnológica."
+    },
+    "automation": {
+      "title": "Automatizaciones",
+      "description": "Automatiza procesos repetitivos y libera tiempo para lo que importa. Workflows, bots, integraciones."
+    }
+  },
+  "cases": {
+    "title": "Casos de éxito",
+    "subtitle": "Resultados reales de clientes reales. Descubre cómo hemos ayudado a empresas como la tuya.",
+    "cta": "Ver caso completo",
+    "viewAll": "Ver todos los casos"
+  },
+  "process": {
+    "title": "Cómo trabajamos",
+    "subtitle": "Sin rodeos. Entendemos tu negocio, ejecutamos rápido y medimos todo.",
+    "steps": [
+      {
+        "title": "Te escuchamos",
+        "description": "Nos sentamos contigo, entendemos qué necesitas y qué problema real estamos resolviendo. Sin jerga, sin humo."
+      },
+      {
+        "title": "Proponemos un plan claro",
+        "description": "Te presentamos qué vamos a hacer, con qué plazos y qué resultados esperar. Si no tiene sentido, te lo decimos."
+      },
+      {
+        "title": "Construimos y lanzamos",
+        "description": "Desarrollo iterativo con entregas cada semana. Ves el progreso en tiempo real y puedes dar feedback en cada sprint."
+      },
+      {
+        "title": "Medimos y mejoramos",
+        "description": "Después del lanzamiento, medimos el impacto real. Datos, no suposiciones. Y seguimos optimizando."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "subtitle": "La satisfacción de nuestros clientes es nuestra mejor carta de presentación."
+  },
+  "cta": {
+    "title": "¿Listo para crecer?",
+    "subtitle": "Hablemos de cómo podemos impulsar tu negocio con soluciones digitales a medida.",
+    "button": "Contactar ahora"
+  },
+  "footer": {
+    "description": "Agencia de soluciones digitales en Tarragona. Desarrollo web, software a medida, automatización de procesos, SEO y GEO.",
+    "services": "Servicios",
+    "company": "Empresa",
+    "legal": "Legal",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "cookies": "Política de cookies",
+    "rights": "Todos los derechos reservados."
+  },
+  "contact": {
+    "title": "Contacta con nosotros",
+    "subtitle": "Cuéntanos tu proyecto y te responderemos en menos de 24 horas.",
+    "name": "Nombre",
+    "email": "Email",
+    "company": "Empresa",
+    "phone": "Teléfono",
+    "service": "Servicio de interés",
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "success": "Mensaje enviado correctamente. Te contactaremos pronto.",
+    "error": "Error al enviar el mensaje. Inténtalo de nuevo.",
+    "selectService": "Selecciona un servicio"
+  },
+  "about": {
+    "title": "Sobre Paforo",
+    "subtitle": "Somos una agencia digital en Tarragona especializada en ayudar a empresas a crecer en el mundo digital.",
+    "mission": "Nuestra misión",
+    "missionText": "Democratizar el acceso a soluciones digitales de calidad para empresas medianas, combinando tecnología de vanguardia con estrategias probadas de crecimiento.",
+    "iaTitle": "Soluciones que antes eran impensables",
+    "iaSubtitle": "La IA ha cambiado las reglas del juego. Lo que antes solo las grandes corporaciones podían permitirse, hoy está al alcance de cualquier empresa.",
+    "iaItems": [
+      { "before": "Un equipo de 10 personas para gestionar llamadas", "after": "Un buzón de voz con IA que transcribe y responde por ti" },
+      { "before": "Software a medida por cientos de miles de euros", "after": "Soluciones personalizadas accesibles para pymes" },
+      { "before": "Departamentos enteros de marketing digital", "after": "Automatizaciones inteligentes que trabajan 24/7" },
+      { "before": "Meses de análisis para tomar una decisión", "after": "Datos en tiempo real para actuar al momento" }
+    ],
+    "iaClosing": "En Paforo creemos que la tecnología debe ser un igualador. Que una empresa de 5 personas pueda competir con una de 50. Y que las personas deberían dedicar su tiempo a lo que importa de verdad: crear vínculos, cuidar a sus clientes y hacer crecer su negocio. La faena repetitiva, aburrida y mecánica, que la haga la tecnología.",
+    "values": "Nuestros valores",
+    "valuesItems": [
+      { "title": "Resultados", "description": "Nos enfocamos en métricas reales y ROI medible." },
+      { "title": "Transparencia", "description": "Comunicación clara y reportes detallados." },
+      { "title": "Innovación", "description": "Tecnologías de vanguardia aplicadas con criterio." },
+      { "title": "Compromiso", "description": "Tu éxito es nuestro éxito." }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artículos, guías y recursos sobre SEO, desarrollo web y marketing digital.",
+    "readMore": "Leer más",
+    "readTime": "min de lectura"
+  },
+  "common": {
+    "learnMore": "Saber más",
+    "backHome": "Volver al inicio",
+    "loading": "Cargando..."
+  }
+}
