@@ -6,12 +6,13 @@
     "blog": "Blog",
     "about": "About",
     "contact": "Contact",
-    "cta": "Start a project"
+    "cta": "Book a meeting"
   },
   "hero": {
     "badge": "Digital agency in Tarragona",
     "title": "Digital solutions that",
-    "titleHighlight": "drive your business",
+    "titleHighlight": "drive your ",
+    "rotatingWords": ["business", "clinic", "store", "gym", "restaurant", "agency", "company"],
     "subtitle": "We help businesses grow with web development, custom software, process automation and positioning strategies. More results, less time.",
     "cta1": "View services",
     "cta2": "Contact us"
@@ -84,9 +85,9 @@
     "subtitle": "Our clients' satisfaction is our best introduction."
   },
   "cta": {
-    "title": "Ready to grow?",
-    "subtitle": "Let's talk about how we can boost your business with tailored digital solutions.",
-    "button": "Contact us now"
+    "title": "Free consultation for your business",
+    "subtitle": "We listen, analyze your processes and show you how AI and automation can save you real time. No strings attached, no fine print.",
+    "button": "Book free consultation"
   },
   "footer": {
     "description": "Digital solutions agency in Tarragona. Web development, custom software, process automation, SEO and GEO.",
@@ -112,9 +113,41 @@
     "error": "Error sending message. Please try again.",
     "selectService": "Select a service"
   },
+  "logos": {
+    "title": "Trusted by leading companies"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "We answer the most common questions about our services and how we work.",
+    "items": [
+      {
+        "question": "How much does a project with Paforo cost?",
+        "answer": "Every project is unique. We work with fixed budgets starting from €2,000 for websites and €5,000 for custom software. We'll send you a detailed quote within 48 hours, no strings attached."
+      },
+      {
+        "question": "How long does a web project take?",
+        "answer": "A corporate website is typically ready in 3-4 weeks. Custom software projects range from 6-12 weeks depending on complexity. Always with weekly deliveries so you can track progress."
+      },
+      {
+        "question": "Do you only work with companies in Tarragona?",
+        "answer": "No. Although we're based in Tarragona, we work with clients across Spain and internationally. Our process is 100% remote-ready."
+      },
+      {
+        "question": "What happens after the project is delivered?",
+        "answer": "We offer ongoing support and maintenance. We monitor performance, apply security updates and keep optimizing based on real data."
+      },
+      {
+        "question": "Can I see results before committing?",
+        "answer": "Yes. In our first meeting, we show you a clear proposal with measurable goals. No fine print, no lock-in. If you don't see value, we don't continue."
+      }
+    ]
+  },
   "about": {
     "title": "About Paforo",
     "subtitle": "We are a digital agency in Tarragona specialized in helping businesses grow in the digital world.",
+    "previewTitle": "A digital agency that speaks your language",
+    "previewText": "We're a team in Tarragona that combines cutting-edge technology with common sense. No unnecessary jargon, no smoke and mirrors. Just solutions that work and results you can measure.",
+    "previewCta": "Meet the team",
     "mission": "Our mission",
     "missionText": "Democratize access to quality digital solutions for mid-sized companies, combining cutting-edge technology with proven growth strategies.",
     "iaTitle": "Solutions that were once unthinkable",

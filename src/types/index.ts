@@ -71,6 +71,7 @@ export interface Dictionary {
     badge: string;
     title: string;
     titleHighlight: string;
+    rotatingWords: string[];
     subtitle: string;
     cta1: string;
     cta2: string;
@@ -136,17 +137,28 @@ export interface Dictionary {
     error: string;
     selectService: string;
   };
+  logos: {
+    title: string;
+  };
   about: {
     title: string;
     subtitle: string;
     mission: string;
     missionText: string;
+    previewTitle: string;
+    previewText: string;
+    previewCta: string;
     iaTitle: string;
     iaSubtitle: string;
     iaItems: { before: string; after: string }[];
     iaClosing: string;
     values: string;
     valuesItems: { title: string; description: string }[];
+  };
+  faq: {
+    title: string;
+    subtitle: string;
+    items: { question: string; answer: string }[];
   };
   blog: {
     title: string;

@@ -6,12 +6,13 @@
     "blog": "Blog",
     "about": "Nosotros",
     "contact": "Contacto",
-    "cta": "Empezar proyecto"
+    "cta": "Reservar reunión"
   },
   "hero": {
     "badge": "Agencia digital en Tarragona",
     "title": "Soluciones digitales que",
-    "titleHighlight": "impulsan tu negocio",
+    "titleHighlight": "impulsan tu ",
+    "rotatingWords": ["negocio", "clínica", "tienda", "gimnasio", "restaurante", "agencia", "empresa"],
     "subtitle": "Ayudamos a empresas a crecer con desarrollo web, software a medida, automatización de procesos y estrategias de posicionamiento. Más resultados, menos tiempo.",
     "cta1": "Ver servicios",
     "cta2": "Contactar"
@@ -84,9 +85,9 @@
     "subtitle": "La satisfacción de nuestros clientes es nuestra mejor carta de presentación."
   },
   "cta": {
-    "title": "¿Listo para crecer?",
-    "subtitle": "Hablemos de cómo podemos impulsar tu negocio con soluciones digitales a medida.",
-    "button": "Contactar ahora"
+    "title": "Consultoría gratuita para tu negocio",
+    "subtitle": "Te escuchamos, analizamos tus procesos y te proponemos cómo la IA y la automatización pueden ahorrarte tiempo real. Sin compromiso, sin letra pequeña.",
+    "button": "Reservar consultoría gratuita"
   },
   "footer": {
     "description": "Agencia de soluciones digitales en Tarragona. Desarrollo web, software a medida, automatización de procesos, SEO y GEO.",
@@ -112,9 +113,41 @@
     "error": "Error al enviar el mensaje. Inténtalo de nuevo.",
     "selectService": "Selecciona un servicio"
   },
+  "logos": {
+    "title": "Confían en nosotros"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Resolvemos las dudas más habituales sobre nuestros servicios y forma de trabajo.",
+    "items": [
+      {
+        "question": "¿Cuánto cuesta un proyecto con Paforo?",
+        "answer": "Cada proyecto es único. Trabajamos con presupuestos cerrados desde 2.000€ para webs y desde 5.000€ para software a medida. Te damos un presupuesto detallado sin compromiso en menos de 48h."
+      },
+      {
+        "question": "¿Cuánto tiempo tarda un proyecto web?",
+        "answer": "Una web corporativa suele estar lista en 3-4 semanas. Proyectos de software a medida varían entre 6-12 semanas según complejidad. Siempre con entregas semanales para que veas el progreso."
+      },
+      {
+        "question": "¿Trabajáis solo con empresas de Tarragona?",
+        "answer": "No. Aunque estamos en Tarragona, trabajamos con clientes de toda España y también internacionales. Nuestro proceso está 100% preparado para trabajo remoto."
+      },
+      {
+        "question": "¿Qué pasa después de entregar el proyecto?",
+        "answer": "Ofrecemos soporte y mantenimiento continuo. Monitorizamos el rendimiento, aplicamos actualizaciones de seguridad y seguimos optimizando basándonos en datos reales."
+      },
+      {
+        "question": "¿Puedo ver resultados antes de comprometerme?",
+        "answer": "Sí. En la primera reunión te mostramos una propuesta clara con objetivos medibles. Sin letra pequeña, sin permanencias. Si no ves valor, no seguimos."
+      }
+    ]
+  },
   "about": {
     "title": "Sobre Paforo",
     "subtitle": "Somos una agencia digital en Tarragona especializada en ayudar a empresas a crecer en el mundo digital.",
+    "previewTitle": "Una agencia digital que habla tu idioma",
+    "previewText": "Somos un equipo en Tarragona que combina tecnología de vanguardia con sentido común. Sin jerga innecesaria, sin humo. Solo soluciones que funcionan y resultados que puedes medir.",
+    "previewCta": "Conoce al equipo",
     "mission": "Nuestra misión",
     "missionText": "Democratizar el acceso a soluciones digitales de calidad para empresas medianas, combinando tecnología de vanguardia con estrategias probadas de crecimiento.",
     "iaTitle": "Soluciones que antes eran impensables",

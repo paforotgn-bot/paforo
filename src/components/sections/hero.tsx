@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
@@ -14,30 +13,16 @@ interface HeroProps {
   dict: Dictionary;
 }
 
-const badgePrefix: Record<string, string> = {
-  es: 'Agencia digital',
-  en: 'Digital agency',
-  ca: 'Agència digital',
-};
-
-const badgeLocations = ['en Tarragona', 'Worldwide'];
-
 export function Hero({ locale, dict }: HeroProps) {
-  const [index, setIndex] = useState(0);
-  const prefix = badgePrefix[locale] || badgePrefix.es;
+  const [wordIndex, setWordIndex] = useState(0);
+  const words = dict.hero.rotatingWords;
 
   useEffect(() => {
-    let count = 0;
     const interval = setInterval(() => {
-      count++;
-      if (count >= 4) {
-        clearInterval(interval);
-        return;
-      }
-      setIndex((prev) => (prev + 1) % badgeLocations.length);
-    }, 4000);
+      setWordIndex((prev) => (prev + 1) % words.length);
+    }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [words.length]);
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden hero-gradient">
@@ -63,32 +48,26 @@ export function Hero({ locale, dict }: HeroProps) {
           animate="animate"
           className="mx-auto max-w-4xl text-center"
         >
-          <motion.div variants={fadeInUp}>
-            <Badge variant="violet" className="gap-1.5 text-base">
-              <span>{prefix}</span>
-              <span className="relative inline-flex items-center overflow-hidden" style={{ width: '6.5em', height: '1.2em' }}>
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={badgeLocations[index]}
-                    initial={{ y: 16, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -16, opacity: 0 }}
-                    transition={{ duration: 0.35 }}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 font-bold whitespace-nowrap"
-                  >
-                    {badgeLocations[index]}
-                  </motion.span>
-                </AnimatePresence>
-              </span>
-            </Badge>
-          </motion.div>
-
           <motion.h1
             variants={fadeInUp}
             className="mt-8 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
             {dict.hero.title}{' '}
-            <span className="gradient-text">{dict.hero.titleHighlight}</span>
+            <span className="gradient-text">
+              {dict.hero.titleHighlight}
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={words[wordIndex]}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="inline-block"
+                >
+                  {words[wordIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </span>
           </motion.h1>
 
           <motion.p
