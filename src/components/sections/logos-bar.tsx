@@ -12,11 +12,11 @@ interface LogosBarProps {
 // scale fine-tunes optical size: stacked logos (mark + small text) read smaller
 // at the same height, so they are nudged up to balance the row visually.
 const logos = [
-  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 2.0 },
+  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 2.3 },
   { name: 'Oravia Travel Group', src: '/images/logos/oravia.png', scale: 1.8 },
   { name: 'ZEA L\'Batarrec', src: '/images/logos/zea.png', scale: 1.0 },
   { name: 'DILEI', src: '/images/logos/dilei.png', scale: 1.0 },
-  { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png', scale: 1.3 },
+  { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png', scale: 1.55 },
   { name: 'Neureduca', src: '/images/logos/neureduca.png', scale: 0.9 },
   { name: 'Rochnvibe', src: '/images/logos/rochnvibe.webp', scale: 0.9 },
 ];
@@ -50,7 +50,7 @@ export function LogosBar({ dict }: LogosBarProps) {
           {[...logos, ...logos].map((logo, i) => (
             <div
               key={`${logo.name}-${i}`}
-              className="flex h-20 shrink-0 items-center justify-center px-14"
+              className="flex h-24 shrink-0 items-center justify-center px-14"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from './language-switcher';
 import { MobileNav } from './mobile-nav';
@@ -53,13 +52,15 @@ export function Header({ locale, dict }: HeaderProps) {
 
   return (
     <>
-      <header
-        className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          scrolled ? 'glass border-b border-border py-3 shadow-sm' : 'py-5 bg-transparent'
-        )}
-      >
-        <Container className="flex items-center justify-between">
+      <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 md:pt-4">
+        <div
+          className={cn(
+            'mx-auto flex max-w-5xl items-center justify-between rounded-full border px-5 md:px-7 transition-all duration-300',
+            scrolled
+              ? 'border-black/10 bg-white/70 py-2.5 shadow-lg shadow-black/5 backdrop-blur-xl backdrop-saturate-150'
+              : 'border-white/60 bg-white/45 py-3 shadow-md shadow-black/5 backdrop-blur-md backdrop-saturate-150'
+          )}
+        >
           <Link href={`/${locale}`} className="text-xl font-bold tracking-tight">
             paforo
           </Link>
@@ -155,7 +156,7 @@ export function Header({ locale, dict }: HeaderProps) {
               </svg>
             </button>
           </div>
-        </Container>
+        </div>
       </header>
 
       <MobileNav
