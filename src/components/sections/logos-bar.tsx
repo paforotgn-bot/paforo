@@ -9,16 +9,16 @@ interface LogosBarProps {
   dict: Dictionary;
 }
 
-// scale fine-tunes optical size: wordmarks read larger at the same height,
-// so a few are nudged down to balance the row visually.
+// scale fine-tunes optical size: stacked logos (mark + small text) read smaller
+// at the same height, so they are nudged up to balance the row visually.
 const logos = [
-  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 1 },
-  { name: 'SansSens', src: '/images/logos/sanssens.png', scale: 1 },
-  { name: 'Oravia Travel Group', src: '/images/logos/oravia.png', scale: 1 },
-  { name: 'ZEA L\'Batarrec', src: '/images/logos/zea-white.svg', scale: 1 },
-  { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png', scale: 1 },
-  { name: 'Neureduca', src: '/images/logos/neureduca.png', scale: 1 },
-  { name: 'Rochnvibe', src: '/images/logos/rochnvibe.webp', scale: 1 },
+  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 1.25 },
+  { name: 'SansSens', src: '/images/logos/sanssens.png', scale: 0.72 },
+  { name: 'Oravia Travel Group', src: '/images/logos/oravia.png', scale: 1.2 },
+  { name: 'ZEA L\'Batarrec', src: '/images/logos/zea-white.svg', scale: 1.05 },
+  { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png', scale: 1.05 },
+  { name: 'Neureduca', src: '/images/logos/neureduca.png', scale: 0.9 },
+  { name: 'Rochnvibe', src: '/images/logos/rochnvibe.webp', scale: 0.9 },
 ];
 
 export function LogosBar({ dict }: LogosBarProps) {
@@ -45,14 +45,14 @@ export function LogosBar({ dict }: LogosBarProps) {
           {[...logos, ...logos].map((logo, i) => (
             <div
               key={`${logo.name}-${i}`}
-              className="flex h-12 shrink-0 items-center justify-center px-10"
+              className="flex h-20 shrink-0 items-center justify-center px-10"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={logo.src}
                 alt={logo.name}
-                style={{ height: `${logo.scale * 2}rem` }}
-                className="w-auto max-w-[160px] object-contain opacity-60 brightness-0 invert transition-all duration-300 hover:opacity-100 hover:brightness-100 hover:invert-0"
+                style={{ height: `${logo.scale * 2.2}rem` }}
+                className="w-auto max-w-[210px] object-contain opacity-70 brightness-0 invert transition-all duration-300 hover:opacity-100 hover:brightness-100 hover:invert-0"
               />
             </div>
           ))}

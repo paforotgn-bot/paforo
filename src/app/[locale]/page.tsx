@@ -1,14 +1,10 @@
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { generatePageMetadata } from '@/lib/seo/metadata';
 import { Hero } from '@/components/sections/hero';
-import { WhoWeAre } from '@/components/sections/who-we-are';
 import { LogosBar } from '@/components/sections/logos-bar';
-import { ServicesOverview } from '@/components/sections/services-overview';
-import { WhyChooseUs } from '@/components/sections/why-choose-us';
-import { CasesShowcase } from '@/components/sections/cases-showcase';
 import { Portfolio } from '@/components/sections/portfolio';
-import { Process } from '@/components/sections/process';
-import { FAQ } from '@/components/sections/faq';
+import { CasesShowcase } from '@/components/sections/cases-showcase';
+import { ServicesOverview } from '@/components/sections/services-overview';
 import { CTASection } from '@/components/sections/cta-section';
 import type { Locale } from '@/lib/constants';
 
@@ -40,18 +36,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <Hero locale={locale as Locale} dict={dict} />
-      <ServicesOverview locale={locale as Locale} dict={dict} />
-      <WhoWeAre dict={dict} />
       <LogosBar dict={dict} />
-      <WhyChooseUs dict={dict} />
-      <CasesShowcase locale={locale as Locale} dict={dict} />
       <Portfolio dict={dict} />
-      <Process dict={dict} />
-      <FAQ
-        title={dict.faq.title}
-        subtitle={dict.faq.subtitle}
-        faqs={dict.faq.items}
-      />
+      <CasesShowcase locale={locale as Locale} dict={dict} />
+      <ServicesOverview locale={locale as Locale} dict={dict} />
       <CTASection locale={locale as Locale} dict={dict} />
     </>
   );
