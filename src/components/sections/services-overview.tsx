@@ -15,7 +15,7 @@ interface ServicesOverviewProps {
   dict: Dictionary;
 }
 
-const serviceKeys = ['web', 'software', 'digital', 'automation', 'geo', 'seo'] as const;
+const serviceKeys = ['web', 'software', 'automation'] as const;
 
 export function ServicesOverview({ locale, dict }: ServicesOverviewProps) {
   return (

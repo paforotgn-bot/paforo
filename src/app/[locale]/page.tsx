@@ -8,8 +8,6 @@ import { WhyChooseUs } from '@/components/sections/why-choose-us';
 import { CasesShowcase } from '@/components/sections/cases-showcase';
 import { Portfolio } from '@/components/sections/portfolio';
 import { Process } from '@/components/sections/process';
-import { Testimonials } from '@/components/sections/testimonials';
-import { AboutPreview } from '@/components/sections/about-preview';
 import { FAQ } from '@/components/sections/faq';
 import { CTASection } from '@/components/sections/cta-section';
 import type { Locale } from '@/lib/constants';
@@ -17,14 +15,14 @@ import type { Locale } from '@/lib/constants';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const titles: Record<string, string> = {
-    es: 'Agencia Digital en Tarragona | Desarrollo Web y Software',
-    en: 'Digital Agency in Tarragona | Web & Software Development',
-    ca: 'Agència Digital a Tarragona | Desenvolupament Web i Software',
+    es: 'Agencia Digital | Desarrollo Web y Software',
+    en: 'Digital Agency | Web & Software Development',
+    ca: 'Agència Digital | Desenvolupament Web i Software',
   };
   const descriptions: Record<string, string> = {
-    es: 'Paforo es una agencia digital en Tarragona especializada en desarrollo web, software a medida, automatización y posicionamiento SEO/GEO. Resultados medibles para empresas.',
-    en: 'Paforo is a digital agency in Tarragona specialized in web development, custom software, automation and SEO/GEO positioning. Measurable results for businesses.',
-    ca: 'Paforo és una agència digital a Tarragona especialitzada en desenvolupament web, software a mida, automatització i posicionament SEO/GEO. Resultats mesurables per a empreses.',
+    es: 'Paforo es una agencia digital especializada en desarrollo web, software a medida, automatización y posicionamiento SEO/GEO. Resultados medibles para empresas.',
+    en: 'Paforo is a digital agency specialized in web development, custom software, automation and SEO/GEO positioning. Measurable results for businesses.',
+    ca: 'Paforo és una agència digital especialitzada en desenvolupament web, software a mida, automatització i posicionament SEO/GEO. Resultats mesurables per a empreses.',
   };
 
   return generatePageMetadata({
@@ -43,14 +41,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <Hero locale={locale as Locale} dict={dict} />
       <ServicesOverview locale={locale as Locale} dict={dict} />
-      <WhoWeAre locale={locale as Locale} dict={dict} />
+      <WhoWeAre dict={dict} />
       <LogosBar dict={dict} />
       <WhyChooseUs dict={dict} />
       <CasesShowcase locale={locale as Locale} dict={dict} />
       <Portfolio dict={dict} />
       <Process dict={dict} />
-      <Testimonials dict={dict} />
-      <AboutPreview locale={locale as Locale} dict={dict} />
       <FAQ
         title={dict.faq.title}
         subtitle={dict.faq.subtitle}

@@ -20,7 +20,7 @@ const featuredCases = [
     slug: 'buzon-voz-ia',
     title: 'Buzón de voz con IA',
     client: 'Clínica de fisioterapia',
-    services: ['Automatizaciones', 'IA'],
+    services: ['Automatizaciones', 'Desarrollo Software'],
     results: [
       { label: 'Llamadas recuperadas', value: '+20/día' },
       { label: 'Horas ahorradas', value: '2h/día' },

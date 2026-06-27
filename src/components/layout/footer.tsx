@@ -13,16 +13,11 @@ export function Footer({ locale, dict }: FooterProps) {
   const serviceLinks = [
     { href: `/${locale}/servicios/desarrollo-web`, label: dict.services.web.title },
     { href: `/${locale}/servicios/desarrollo-software`, label: dict.services.software.title },
-    { href: `/${locale}/servicios/soluciones-digitales`, label: dict.services.digital.title },
     { href: `/${locale}/servicios/automatizaciones`, label: dict.services.automation.title },
-    { href: `/${locale}/servicios/geo`, label: 'GEO (IA)' },
-    { href: `/${locale}/servicios/seo`, label: 'SEO' },
   ];
 
   const companyLinks = [
-    { href: `/${locale}/nosotros`, label: dict.nav.about },
     { href: `/${locale}/casos`, label: dict.nav.cases },
-    { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/contacto`, label: dict.nav.contact },
   ];
 

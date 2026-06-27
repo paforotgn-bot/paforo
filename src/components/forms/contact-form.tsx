@@ -60,11 +60,8 @@ export function ContactForm({ dict }: ContactFormProps) {
 
   const serviceOptions = [
     { value: '', label: dict.contact.selectService },
-    { value: 'seo', label: 'SEO' },
-    { value: 'geo', label: 'GEO (IA)' },
     { value: 'web', label: dict.services.web.title },
     { value: 'software', label: dict.services.software.title },
-    { value: 'digital', label: dict.services.digital.title },
     { value: 'automation', label: dict.services.automation.title },
   ];
 

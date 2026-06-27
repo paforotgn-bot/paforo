@@ -3,13 +3,12 @@
     "home": "Home",
     "services": "Services",
     "cases": "Case Studies",
-    "blog": "Blog",
     "about": "About",
     "contact": "Contact",
     "cta": "Book a meeting"
   },
   "hero": {
-    "badge": "Digital agency in Tarragona",
+    "badge": "Digital agency",
     "title": "Digital solutions that",
     "titleHighlight": "drive your business",
     "subtitle": "We help businesses grow with web development, custom software, process automation and positioning strategies. More results, less time.",
@@ -32,14 +31,6 @@
     "title": "Our services",
     "subtitle": "Comprehensive solutions to boost your digital presence and optimize your business processes.",
     "cta": "Learn more",
-    "seo": {
-      "title": "SEO",
-      "description": "We rank your website in Google's top results with technical SEO, content and link building strategies."
-    },
-    "geo": {
-      "title": "GEO (AI)",
-      "description": "Position your brand in ChatGPT, Google AI Overviews, Perplexity and other generative AI engines."
-    },
     "web": {
       "title": "Web Development",
       "description": "Fast, accessible and conversion-optimized websites. Next.js, React and cutting-edge technologies."
@@ -47,10 +38,6 @@
     "software": {
       "title": "Software Development",
       "description": "Custom software to automate and scale your business. APIs, dashboards, integrations."
-    },
-    "digital": {
-      "title": "Digital Solutions",
-      "description": "End-to-end digital transformation: from strategy to technology implementation."
     },
     "automation": {
       "title": "Automations",
@@ -100,7 +87,7 @@
     "button": "Book free consultation"
   },
   "footer": {
-    "description": "Digital solutions agency in Tarragona. Web development, custom software, process automation, SEO and GEO.",
+    "description": "Digital solutions agency. Web development, custom software, process automation, SEO and GEO.",
     "services": "Services",
     "company": "Company",
     "legal": "Legal",
@@ -139,8 +126,8 @@
         "answer": "A corporate website is typically ready in 3-4 weeks. Custom software projects range from 6-12 weeks depending on complexity. Always with weekly deliveries so you can track progress."
       },
       {
-        "question": "Do you only work with companies in Tarragona?",
-        "answer": "No. Although we're based in Tarragona, we work with clients across Spain and internationally. Our process is 100% remote-ready."
+        "question": "Do you work with companies from any country?",
+        "answer": "Yes. We work remotely with clients anywhere in the world. Our process is 100% remote-ready, no matter where you are."
       },
       {
         "question": "What happens after the project is delivered?",
@@ -154,9 +141,9 @@
   },
   "about": {
     "title": "About Paforo",
-    "subtitle": "We are a digital agency in Tarragona specialized in helping businesses grow in the digital world.",
+    "subtitle": "We are a digital agency specialized in helping businesses grow in the digital world.",
     "previewTitle": "A digital agency that speaks your language",
-    "previewText": "We're a team in Tarragona that combines cutting-edge technology with common sense. No unnecessary jargon, no smoke and mirrors. Just solutions that work and results you can measure.",
+    "previewText": "We're a team that combines cutting-edge technology with common sense. No unnecessary jargon, no smoke and mirrors. Just solutions that work and results you can measure.",
     "previewCta": "Meet the team",
     "mission": "Our mission",
     "missionText": "Democratize access to quality digital solutions for mid-sized companies, combining cutting-edge technology with proven growth strategies.",
@@ -176,12 +163,6 @@
       { "title": "Innovation", "description": "Cutting-edge technologies applied with purpose." },
       { "title": "Commitment", "description": "Your success is our success." }
     ]
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Articles, guides and resources about SEO, web development and digital marketing.",
-    "readMore": "Read more",
-    "readTime": "min read"
   },
   "common": {
     "learnMore": "Learn more",

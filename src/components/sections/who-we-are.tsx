@@ -2,17 +2,14 @@
 
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/section';
-import { Button } from '@/components/ui/button';
 import { fadeInUp } from '@/lib/animations';
-import type { Locale } from '@/lib/constants';
 import type { Dictionary } from '@/types';
 
 interface WhoWeAreProps {
-  locale: Locale;
   dict: Dictionary;
 }
 
-export function WhoWeAre({ locale, dict }: WhoWeAreProps) {
+export function WhoWeAre({ dict }: WhoWeAreProps) {
   return (
     <Section>
       <motion.div
@@ -34,11 +31,6 @@ export function WhoWeAre({ locale, dict }: WhoWeAreProps) {
         <p className="mt-4 text-lg text-foreground/70 leading-relaxed">
           {dict.whoWeAre.text2}
         </p>
-        <div className="mt-10">
-          <Button href={`/${locale}/nosotros`} variant="primary">
-            {dict.whoWeAre.cta} →
-          </Button>
-        </div>
       </motion.div>
     </Section>
   );

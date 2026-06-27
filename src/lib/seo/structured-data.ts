@@ -80,10 +80,7 @@ export function getServiceSchema(service: {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Tarragona',
-    },
+    areaServed: 'Worldwide',
   };
 }
 
@@ -126,33 +123,5 @@ export function getBreadcrumbSchema(
       name: item.name,
       item: item.url,
     })),
-  };
-}
-
-export function getBlogPostSchema(post: {
-  title: string;
-  description: string;
-  date: string;
-  author: string;
-  url: string;
-  image?: string;
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    author: {
-      '@type': 'Person',
-      name: post.author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
-    url: post.url,
-    image: post.image,
   };
 }

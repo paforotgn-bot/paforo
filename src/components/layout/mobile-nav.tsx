@@ -19,7 +19,7 @@ interface MobileNavProps {
   dict: Dictionary;
 }
 
-const serviceKeys = ['web', 'software', 'digital', 'automation', 'geo', 'seo'] as const;
+const serviceKeys = ['web', 'software', 'automation'] as const;
 
 export function MobileNav({ isOpen, onClose, navItems, locale, dict }: MobileNavProps) {
   const pathname = usePathname();

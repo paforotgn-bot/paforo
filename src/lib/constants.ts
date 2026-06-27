@@ -44,27 +44,9 @@ export const SERVICES = [
     color: 'cyan' as const,
   },
   {
-    slug: { es: 'soluciones-digitales', en: 'digital-solutions', ca: 'solucions-digitals' },
-    icon: '💡',
-    image: '/images/services/soluciones-digitales.png',
-    color: 'violet' as const,
-  },
-  {
     slug: { es: 'automatizaciones', en: 'automations', ca: 'automatitzacions' },
     icon: '🤖',
     image: '/images/services/automatizaciones.png',
-    color: 'cyan' as const,
-  },
-  {
-    slug: { es: 'geo', en: 'geo', ca: 'geo' },
-    icon: '🤖',
-    image: '/images/services/geo.png',
     color: 'violet' as const,
-  },
-  {
-    slug: { es: 'seo', en: 'seo', ca: 'seo' },
-    icon: '🔍',
-    image: '/images/services/seo.png',
-    color: 'cyan' as const,
   },
 ] as const;

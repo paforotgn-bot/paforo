@@ -8,18 +8,6 @@ export interface ServicePageProps {
   params: Promise<{ locale: Locale; slug?: string }>;
 }
 
-export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
-  author: string;
-  image?: string;
-  tags: string[];
-  readTime: number;
-  content: string;
-}
-
 export interface CaseStudy {
   slug: string;
   title: string;
@@ -62,7 +50,6 @@ export interface Dictionary {
     home: string;
     services: string;
     cases: string;
-    blog: string;
     about: string;
     contact: string;
     cta: string;
@@ -85,11 +72,8 @@ export interface Dictionary {
     title: string;
     subtitle: string;
     cta: string;
-    seo: { title: string; description: string };
-    geo: { title: string; description: string };
     web: { title: string; description: string };
     software: { title: string; description: string };
-    digital: { title: string; description: string };
     automation: { title: string; description: string };
   };
   cases: {
@@ -169,12 +153,6 @@ export interface Dictionary {
     title: string;
     subtitle: string;
     items: { question: string; answer: string }[];
-  };
-  blog: {
-    title: string;
-    subtitle: string;
-    readMore: string;
-    readTime: string;
   };
   common: {
     learnMore: string;

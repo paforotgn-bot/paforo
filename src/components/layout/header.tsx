@@ -17,7 +17,7 @@ interface HeaderProps {
   dict: Dictionary;
 }
 
-const serviceKeys = ['web', 'software', 'digital', 'automation', 'geo', 'seo'] as const;
+const serviceKeys = ['web', 'software', 'automation'] as const;
 
 export function Header({ locale, dict }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
@@ -44,8 +44,6 @@ export function Header({ locale, dict }: HeaderProps) {
 
   const navItems = [
     { href: `/${locale}/casos`, label: dict.nav.cases },
-    { href: `/${locale}/blog`, label: dict.nav.blog },
-    { href: `/${locale}/nosotros`, label: dict.nav.about },
   ];
 
   const serviceItems = SERVICES.map((service, i) => ({

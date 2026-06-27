@@ -1,14 +1,18 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { generatePageMetadata } from '@/lib/seo/metadata';
 import { getServiceData, getAllServiceSlugs } from '@/lib/content/services';
+import { getCaseStudies } from '@/lib/content/cases';
 import { getServiceSchema, getFAQSchema } from '@/lib/seo/structured-data';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumbs } from '@/components/seo/breadcrumbs';
 import { Container } from '@/components/ui/container';
 import { Section, SectionHeader } from '@/components/ui/section';
 import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { GlowCard } from '@/components/ui/glow-card';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { FAQ } from '@/components/sections/faq';
@@ -51,6 +55,9 @@ export default async function ServicePage({ params }: { params: Promise<{ locale
   if (!service) notFound();
 
   const serviceImage = getServiceImage(slug);
+  const relatedCases = getCaseStudies(locale as Locale).filter((c) =>
+    c.services.includes(service.title)
+  );
 
   return (
     <>
@@ -142,6 +149,39 @@ export default async function ServicePage({ params }: { params: Promise<{ locale
           ))}
         </div>
       </Section>
+
+      {/* Related case studies */}
+      {relatedCases.length > 0 && (
+        <Section>
+          <SectionHeader title={dict.cases.title} subtitle={dict.cases.subtitle} />
+          <div className="grid gap-8 md:grid-cols-2">
+            {relatedCases.map((c) => (
+              <Link key={c.slug} href={`/${locale}/casos/${c.slug}`}>
+                <Card className="h-full">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {c.services.map((s) => (
+                      <Badge key={s} variant="violet">{s}</Badge>
+                    ))}
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{c.title}</h3>
+                  <p className="text-sm text-muted mb-6">{c.description}</p>
+                  <div className="grid grid-cols-2 gap-4 border-t border-border pt-4 mb-6">
+                    {c.results.slice(0, 2).map((r) => (
+                      <div key={r.label}>
+                        <p className="font-mono text-2xl font-bold gradient-text">{r.value}</p>
+                        <p className="text-xs text-muted mt-1">{r.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold text-violet hover:underline">
+                    {dict.cases.cta} →
+                  </span>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </Section>
+      )}
 
       {/* FAQ */}
       <FAQ

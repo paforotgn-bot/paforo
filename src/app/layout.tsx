@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://paforo.com'),
   title: 'Paforo - Soluciones digitales que impulsan tu negocio',
   description:
-    'Agencia de soluciones digitales en Tarragona. Desarrollo web, software a medida, automatización de procesos, SEO y GEO para empresas.',
+    'Agencia de soluciones digitales. Desarrollo web, software a medida, automatización de procesos, SEO y GEO para empresas.',
 };
 
 export default function RootLayout({

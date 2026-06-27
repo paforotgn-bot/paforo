@@ -3,13 +3,12 @@
     "home": "Inici",
     "services": "Serveis",
     "cases": "Casos d'èxit",
-    "blog": "Blog",
     "about": "Sobre nosaltres",
     "contact": "Contacte",
     "cta": "Reservar reunió"
   },
   "hero": {
-    "badge": "Agència digital a Tarragona",
+    "badge": "Agència digital",
     "title": "Solucions digitals que",
     "titleHighlight": "impulsen el teu negoci",
     "subtitle": "Ajudem a empreses a créixer amb desenvolupament web, software a mida, automatització de processos i estratègies de posicionament. Més resultats, menys temps.",
@@ -32,14 +31,6 @@
     "title": "Els nostres serveis",
     "subtitle": "Solucions integrals per impulsar la teva presència digital i optimitzar els teus processos de negoci.",
     "cta": "Més informació",
-    "seo": {
-      "title": "SEO",
-      "description": "Posicionem el teu web als primers resultats de Google amb estratègies de SEO tècnic, contingut i link building."
-    },
-    "geo": {
-      "title": "GEO (IA)",
-      "description": "Posiciona la teva marca a ChatGPT, Google AI Overviews, Perplexity i altres motors d'IA generativa."
-    },
     "web": {
       "title": "Desenvolupament Web",
       "description": "Webs ràpides, accessibles i optimitzades per a conversió. Next.js, React i les millors tecnologies."
@@ -47,10 +38,6 @@
     "software": {
       "title": "Desenvolupament Software",
       "description": "Software a mida per automatitzar i escalar el teu negoci. APIs, dashboards, integracions."
-    },
-    "digital": {
-      "title": "Solucions Digitals",
-      "description": "Transformació digital integral: des de l'estratègia fins a la implementació tecnològica."
     },
     "automation": {
       "title": "Automatitzacions",
@@ -100,7 +87,7 @@
     "button": "Reservar consultoria gratuïta"
   },
   "footer": {
-    "description": "Agència de solucions digitals a Tarragona. Desenvolupament web, software a mida, automatització de processos, SEO i GEO.",
+    "description": "Agència de solucions digitals. Desenvolupament web, software a mida, automatització de processos, SEO i GEO.",
     "services": "Serveis",
     "company": "Empresa",
     "legal": "Legal",
@@ -139,8 +126,8 @@
         "answer": "Una web corporativa sol estar llesta en 3-4 setmanes. Projectes de software a mida varien entre 6-12 setmanes segons la complexitat. Sempre amb lliuraments setmanals perquè vegis el progrés."
       },
       {
-        "question": "Treballeu només amb empreses de Tarragona?",
-        "answer": "No. Tot i que som a Tarragona, treballem amb clients de tota Espanya i també internacionals. El nostre procés està 100% preparat per a treball remot."
+        "question": "Treballeu amb empreses de qualsevol país?",
+        "answer": "Sí. Treballem en remot amb clients de qualsevol part del món. El nostre procés està 100% preparat per a la col·laboració a distància, independentment d'on siguis."
       },
       {
         "question": "Què passa després de lliurar el projecte?",
@@ -154,9 +141,9 @@
   },
   "about": {
     "title": "Sobre Paforo",
-    "subtitle": "Som una agència digital a Tarragona especialitzada en ajudar a empreses a créixer al món digital.",
+    "subtitle": "Som una agència digital especialitzada en ajudar a empreses a créixer al món digital.",
     "previewTitle": "Una agència digital que parla el teu idioma",
-    "previewText": "Som un equip a Tarragona que combina tecnologia d'avantguarda amb sentit comú. Sense argot innecessari, sense fum. Només solucions que funcionen i resultats que pots mesurar.",
+    "previewText": "Som un equip que combina tecnologia d'avantguarda amb sentit comú. Sense argot innecessari, sense fum. Només solucions que funcionen i resultats que pots mesurar.",
     "previewCta": "Coneix l'equip",
     "mission": "La nostra missió",
     "missionText": "Democratitzar l'accés a solucions digitals de qualitat per a empreses mitjanes, combinant tecnologia d'avantguarda amb estratègies provades de creixement.",
@@ -176,12 +163,6 @@
       { "title": "Innovació", "description": "Tecnologies d'avantguarda aplicades amb criteri." },
       { "title": "Compromís", "description": "El teu èxit és el nostre èxit." }
     ]
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Articles, guies i recursos sobre SEO, desenvolupament web i màrqueting digital.",
-    "readMore": "Llegir més",
-    "readTime": "min de lectura"
   },
   "common": {
     "learnMore": "Saber més",

@@ -25,8 +25,8 @@ const testimonials: Testimonial[] = [
   {
     name: 'Ana Martínez',
     role: 'Propietaria',
-    company: 'La Boquería Digital',
-    quote: 'Gracias al GEO de Paforo, nuestro restaurante aparece cuando la gente pregunta a ChatGPT o Google AI por dónde comer en Tarragona. Los clientes llegan por canales que antes ni existían.',
+    company: 'Grupo Sabor',
+    quote: 'Gracias al GEO de Paforo, nuestro restaurante aparece cuando la gente pregunta a ChatGPT o Google AI por dónde comer. Los clientes llegan por canales que antes ni existían.',
   },
 ];
 

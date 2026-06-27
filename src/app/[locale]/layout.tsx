@@ -4,7 +4,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { JsonLd } from '@/components/seo/json-ld';
-import { getOrganizationSchema, getLocalBusinessSchema, getWebSiteSchema } from '@/lib/seo/structured-data';
+import { getOrganizationSchema, getWebSiteSchema } from '@/lib/seo/structured-data';
 import type { Locale } from '@/lib/constants';
 
 export async function generateStaticParams() {
@@ -29,7 +29,6 @@ export default async function LocaleLayout({
   return (
     <>
       <JsonLd data={getOrganizationSchema()} />
-      <JsonLd data={getLocalBusinessSchema()} />
       <JsonLd data={getWebSiteSchema()} />
       <Header locale={locale as Locale} dict={dict} />
       <main className="flex-1 pt-20">{children}</main>

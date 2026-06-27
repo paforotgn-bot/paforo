@@ -3,13 +3,12 @@
     "home": "Inicio",
     "services": "Servicios",
     "cases": "Casos de éxito",
-    "blog": "Blog",
     "about": "Nosotros",
     "contact": "Contacto",
     "cta": "Reservar reunión"
   },
   "hero": {
-    "badge": "Agencia digital en Tarragona",
+    "badge": "Agencia digital",
     "title": "Soluciones digitales que",
     "titleHighlight": "impulsan tu negocio",
     "subtitle": "Ayudamos a empresas a crecer con desarrollo web, software a medida, automatización de procesos y estrategias de posicionamiento. Más resultados, menos tiempo.",
@@ -32,14 +31,6 @@
     "title": "Nuestros servicios",
     "subtitle": "Soluciones integrales para impulsar tu presencia digital y optimizar tus procesos de negocio.",
     "cta": "Más información",
-    "seo": {
-      "title": "SEO",
-      "description": "Posicionamos tu web en los primeros resultados de Google con estrategias de SEO técnico, contenido y link building."
-    },
-    "geo": {
-      "title": "GEO (IA)",
-      "description": "Posiciona tu marca en ChatGPT, Google AI Overviews, Perplexity y otros motores de IA generativa."
-    },
     "web": {
       "title": "Desarrollo Web",
       "description": "Webs rápidas, accesibles y optimizadas para conversión. Next.js, React y las mejores tecnologías."
@@ -47,10 +38,6 @@
     "software": {
       "title": "Desarrollo Software",
       "description": "Software a medida para automatizar y escalar tu negocio. APIs, dashboards, integraciones."
-    },
-    "digital": {
-      "title": "Soluciones Digitales",
-      "description": "Transformación digital integral: desde la estrategia hasta la implementación tecnológica."
     },
     "automation": {
       "title": "Automatizaciones",
@@ -100,7 +87,7 @@
     "button": "Reservar consultoría gratuita"
   },
   "footer": {
-    "description": "Agencia de soluciones digitales en Tarragona. Desarrollo web, software a medida, automatización de procesos, SEO y GEO.",
+    "description": "Agencia de soluciones digitales. Desarrollo web, software a medida, automatización de procesos, SEO y GEO.",
     "services": "Servicios",
     "company": "Empresa",
     "legal": "Legal",
@@ -139,8 +126,8 @@
         "answer": "Una web corporativa suele estar lista en 3-4 semanas. Proyectos de software a medida varían entre 6-12 semanas según complejidad. Siempre con entregas semanales para que veas el progreso."
       },
       {
-        "question": "¿Trabajáis solo con empresas de Tarragona?",
-        "answer": "No. Aunque estamos en Tarragona, trabajamos con clientes de toda España y también internacionales. Nuestro proceso está 100% preparado para trabajo remoto."
+        "question": "¿Trabajáis con empresas de cualquier país?",
+        "answer": "Sí. Trabajamos en remoto con clientes de cualquier parte del mundo. Nuestro proceso está 100% preparado para colaboración a distancia, sin importar dónde estés."
       },
       {
         "question": "¿Qué pasa después de entregar el proyecto?",
@@ -154,9 +141,9 @@
   },
   "about": {
     "title": "Sobre Paforo",
-    "subtitle": "Somos una agencia digital en Tarragona especializada en ayudar a empresas a crecer en el mundo digital.",
+    "subtitle": "Somos una agencia digital especializada en ayudar a empresas a crecer en el mundo digital.",
     "previewTitle": "Una agencia digital que habla tu idioma",
-    "previewText": "Somos un equipo en Tarragona que combina tecnología de vanguardia con sentido común. Sin jerga innecesaria, sin humo. Solo soluciones que funcionan y resultados que puedes medir.",
+    "previewText": "Somos un equipo que combina tecnología de vanguardia con sentido común. Sin jerga innecesaria, sin humo. Solo soluciones que funcionan y resultados que puedes medir.",
     "previewCta": "Conoce al equipo",
     "mission": "Nuestra misión",
     "missionText": "Democratizar el acceso a soluciones digitales de calidad para empresas medianas, combinando tecnología de vanguardia con estrategias probadas de crecimiento.",
@@ -176,12 +163,6 @@
       { "title": "Innovación", "description": "Tecnologías de vanguardia aplicadas con criterio." },
       { "title": "Compromiso", "description": "Tu éxito es nuestro éxito." }
     ]
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Artículos, guías y recursos sobre SEO, desarrollo web y marketing digital.",
-    "readMore": "Leer más",
-    "readTime": "min de lectura"
   },
   "common": {
     "learnMore": "Saber más",

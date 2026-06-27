@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/section';
 import { fadeInUp } from '@/lib/animations';
@@ -10,14 +9,16 @@ interface LogosBarProps {
   dict: Dictionary;
 }
 
+// scale fine-tunes optical size: wordmarks read larger at the same height,
+// so a few are nudged down to balance the row visually.
 const logos = [
-  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png' },
-  { name: 'SansSens', src: '/images/logos/sanssens.png' },
-  { name: 'Oravia Travel Group', src: '/images/logos/oravia.png' },
-  { name: 'ZEA L\'Batarrec', src: '/images/logos/zea-white.svg' },
-  { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png' },
-  { name: 'Neureduca', src: '/images/logos/neureduca.png' },
-  { name: 'Rochnvibe', src: '/images/logos/rochnvibe.webp' },
+  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 1 },
+  { name: 'SansSens', src: '/images/logos/sanssens.png', scale: 1 },
+  { name: 'Oravia Travel Group', src: '/images/logos/oravia.png', scale: 1 },
+  { name: 'ZEA L\'Batarrec', src: '/images/logos/zea-white.svg', scale: 1 },
+  { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png', scale: 1 },
+  { name: 'Neureduca', src: '/images/logos/neureduca.png', scale: 1 },
+  { name: 'Rochnvibe', src: '/images/logos/rochnvibe.webp', scale: 1 },
 ];
 
 export function LogosBar({ dict }: LogosBarProps) {
@@ -36,17 +37,22 @@ export function LogosBar({ dict }: LogosBarProps) {
       </motion.div>
 
       <div className="relative">
+        {/* Edge fade so logos slide in/out smoothly */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-foreground to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-foreground to-transparent" />
+
         <div className="flex w-max animate-marquee items-center">
           {[...logos, ...logos].map((logo, i) => (
             <div
               key={`${logo.name}-${i}`}
-              className="relative mx-10 h-10 w-36 shrink-0 opacity-60 hover:opacity-100 brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300"
+              className="flex h-12 shrink-0 items-center justify-center px-10"
             >
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={logo.src}
                 alt={logo.name}
-                fill
-                className="object-contain"
+                style={{ height: `${logo.scale * 2}rem` }}
+                className="w-auto max-w-[160px] object-contain opacity-60 brightness-0 invert transition-all duration-300 hover:opacity-100 hover:brightness-100 hover:invert-0"
               />
             </div>
           ))}

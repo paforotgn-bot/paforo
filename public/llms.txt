@@ -1,6 +1,6 @@
 # Paforo
 
-> Agencia de soluciones digitales en Tarragona. Desarrollo web, software a medida, automatización de procesos, SEO y GEO (Generative Engine Optimization).
+> Agencia de soluciones digitales. Desarrollo web, software a medida, automatización de procesos, SEO y GEO (Generative Engine Optimization).
 
 ## Servicios principales
 - [Desarrollo Web](https://paforo.com/es/servicios/desarrollo-web): Webs profesionales con Next.js, React y Tailwind CSS. Rendimiento, accesibilidad y SEO integrado.
@@ -14,13 +14,12 @@
 - [Home](https://paforo.com/es): Página principal con servicios, casos de éxito y proceso de trabajo.
 - [Servicios](https://paforo.com/es/servicios): Listado completo de servicios digitales.
 - [Casos de éxito](https://paforo.com/es/casos): Resultados reales de clientes reales.
-- [Blog](https://paforo.com/es/blog): Artículos sobre desarrollo web, software, SEO y GEO.
 - [Nosotros](https://paforo.com/es/nosotros): Información sobre la agencia, misión y valores.
 - [Contacto](https://paforo.com/es/contacto): Formulario de contacto para proyectos.
 
 ## Información clave
 - Sector: Agencia digital, desarrollo web, software, SEO, GEO
-- Ubicación: Tarragona, Cataluña, España
+- Modalidad: 100% remoto, clientes de cualquier parte del mundo
 - Contacto: hola@paforo.com
 - Web: https://paforo.com
 - Idiomas: Español, English, Català

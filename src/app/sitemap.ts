@@ -1,14 +1,13 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL, LOCALES } from '@/lib/constants';
 import { getAllServiceSlugs } from '@/lib/content/services';
-import { getBlogPosts } from '@/lib/content/blog';
 import { getCaseStudies } from '@/lib/content/cases';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   // Static pages
-  const staticPages = ['', '/servicios', '/casos', '/blog', '/nosotros', '/contacto'];
+  const staticPages = ['', '/servicios', '/casos', '/contacto'];
 
   for (const page of staticPages) {
     for (const locale of LOCALES) {
@@ -30,19 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.9,
-      });
-    }
-  }
-
-  // Blog posts
-  for (const locale of LOCALES) {
-    const posts = getBlogPosts(locale);
-    for (const post of posts) {
-      entries.push({
-        url: `${SITE_URL}/${locale}/blog/${post.slug}`,
-        lastModified: new Date(post.date),
-        changeFrequency: 'monthly',
-        priority: 0.7,
       });
     }
   }

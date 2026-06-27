@@ -15,13 +15,14 @@ const projects = [
     name: 'Limboo Beach Club',
     tag: 'Restaurante & eventos',
     url: 'https://www.limboobeachclub.com/',
-    image: '/images/portfolio/limboo.jpg',
+    image: '/images/portfolio/limboo.png',
+    objectPosition: 'object-center',
   },
   {
     name: 'Fontanet Medicina i Fisioterapia',
     tag: 'Clínica',
     url: 'https://fontanettgn.es/',
-    image: '/images/portfolio/fontanettgn.jpg',
+    image: '/images/portfolio/fontanettgn.avif',
   },
   {
     name: 'ZEA L\'Batarrec',
@@ -58,7 +59,7 @@ export function Portfolio({ dict }: PortfolioProps) {
                 src={project.image}
                 alt={project.name}
                 fill
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                className={`object-cover ${project.objectPosition ?? 'object-top'} transition-transform duration-500 group-hover:scale-105`}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
