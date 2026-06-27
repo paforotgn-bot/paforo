@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
 import { fadeInUp } from '@/lib/animations';
 import type { Dictionary } from '@/types';
 
@@ -12,40 +12,45 @@ interface LogosBarProps {
 // scale fine-tunes optical size: stacked logos (mark + small text) read smaller
 // at the same height, so they are nudged up to balance the row visually.
 const logos = [
-  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 1.7 },
-  { name: 'Oravia Travel Group', src: '/images/logos/oravia.png', scale: 1.55 },
+  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 2.0 },
+  { name: 'Oravia Travel Group', src: '/images/logos/oravia.png', scale: 1.8 },
   { name: 'ZEA L\'Batarrec', src: '/images/logos/zea.png', scale: 1.0 },
   { name: 'DILEI', src: '/images/logos/dilei.png', scale: 1.0 },
-  { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png', scale: 1.05 },
+  { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png', scale: 1.3 },
   { name: 'Neureduca', src: '/images/logos/neureduca.png', scale: 0.9 },
   { name: 'Rochnvibe', src: '/images/logos/rochnvibe.webp', scale: 0.9 },
 ];
 
 export function LogosBar({ dict }: LogosBarProps) {
   return (
-    <Section className="py-12 md:py-16 bg-foreground overflow-hidden">
-      <motion.div
-        initial={fadeInUp.initial}
-        whileInView={fadeInUp.animate}
-        viewport={{ once: true }}
-        transition={fadeInUp.transition}
-        className="text-center"
-      >
-        <p className="text-sm font-medium text-white/50 uppercase tracking-wider mb-10">
-          {dict.logos.title}
-        </p>
-      </motion.div>
+    <section className="py-20 md:py-28 bg-foreground overflow-hidden">
+      <Container>
+        <motion.div
+          initial={fadeInUp.initial}
+          whileInView={fadeInUp.animate}
+          viewport={{ once: true }}
+          transition={fadeInUp.transition}
+          className="text-center mb-14 md:mb-16"
+        >
+          <div className="flex justify-center mb-6">
+            <div className="section-gradient-line" />
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-white">
+            {dict.logos.title}
+          </h2>
+        </motion.div>
+      </Container>
 
+      {/* Full-bleed marquee so the edge fades reach the viewport edges */}
       <div className="relative">
-        {/* Edge fade so logos slide in/out smoothly */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-foreground to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-foreground to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-28 md:w-40 bg-gradient-to-r from-foreground to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-28 md:w-40 bg-gradient-to-l from-foreground to-transparent" />
 
         <div className="flex w-max animate-marquee items-center">
           {[...logos, ...logos].map((logo, i) => (
             <div
               key={`${logo.name}-${i}`}
-              className="flex h-20 shrink-0 items-center justify-center px-10"
+              className="flex h-20 shrink-0 items-center justify-center px-14"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -58,6 +63,6 @@ export function LogosBar({ dict }: LogosBarProps) {
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

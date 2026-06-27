@@ -36,10 +36,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <Hero locale={locale as Locale} dict={dict} />
+      <ServicesOverview locale={locale as Locale} dict={dict} />
       <LogosBar dict={dict} />
       <Portfolio dict={dict} />
       <CasesShowcase locale={locale as Locale} dict={dict} />
-      <ServicesOverview locale={locale as Locale} dict={dict} />
       <CTASection locale={locale as Locale} dict={dict} />
     </>
   );
