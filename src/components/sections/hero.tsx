@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
@@ -14,16 +13,6 @@ interface HeroProps {
 }
 
 export function Hero({ locale, dict }: HeroProps) {
-  const [wordIndex, setWordIndex] = useState(0);
-  const words = dict.hero.rotatingWords;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setWordIndex((prev) => (prev + 1) % words.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [words.length]);
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden hero-gradient">
       {/* Dot grid background */}
@@ -54,21 +43,7 @@ export function Hero({ locale, dict }: HeroProps) {
           >
             {dict.hero.title}
             <br />
-            <span className="gradient-text">
-              {dict.hero.titleHighlight}
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={words[wordIndex]}
-                  initial={{ opacity: 0, filter: 'blur(8px)' }}
-                  animate={{ opacity: 1, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, filter: 'blur(8px)' }}
-                  transition={{ duration: 0.4 }}
-                  className="inline-block"
-                >
-                  {words[wordIndex]}
-                </motion.span>
-              </AnimatePresence>
-            </span>
+            <span className="gradient-text">{dict.hero.titleHighlight}</span>
           </motion.h1>
 
           <motion.p

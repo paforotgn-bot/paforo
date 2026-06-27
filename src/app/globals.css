@@ -188,6 +188,20 @@ body {
   animation: float-reverse 12s ease-in-out 3s infinite;
 }
 
+/* Logo marquee (single-line infinite slider) */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Scanline sweep */
 .scanline::after {
   content: '';

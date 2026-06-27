@@ -71,7 +71,6 @@ export interface Dictionary {
     badge: string;
     title: string;
     titleHighlight: string;
-    rotatingWords: string[];
     subtitle: string;
     cta1: string;
     cta2: string;
@@ -98,6 +97,11 @@ export interface Dictionary {
     subtitle: string;
     cta: string;
     viewAll: string;
+  };
+  portfolio: {
+    title: string;
+    subtitle: string;
+    cta: string;
   };
   process: {
     title: string;

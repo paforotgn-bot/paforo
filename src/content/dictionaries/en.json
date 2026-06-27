@@ -11,8 +11,7 @@
   "hero": {
     "badge": "Digital agency in Tarragona",
     "title": "Digital solutions that",
-    "titleHighlight": "drive your ",
-    "rotatingWords": ["business", "clinic", "store", "gym", "restaurant", "agency", "company"],
+    "titleHighlight": "drive your business",
     "subtitle": "We help businesses grow with web development, custom software, process automation and positioning strategies. More results, less time.",
     "cta1": "View services",
     "cta2": "Contact us"
@@ -63,6 +62,11 @@
     "subtitle": "Real results from real clients. Discover how we've helped businesses like yours.",
     "cta": "View full case",
     "viewAll": "View all cases"
+  },
+  "portfolio": {
+    "title": "Websites we've built",
+    "subtitle": "A selection of the projects we've designed and developed. Click to visit them.",
+    "cta": "Visit website"
   },
   "process": {
     "title": "How we work",
@@ -120,7 +124,7 @@
     "selectService": "Select a service"
   },
   "logos": {
-    "title": "Trusted by leading companies"
+    "title": "Businesses that have trusted us"
   },
   "faq": {
     "title": "Frequently asked questions",

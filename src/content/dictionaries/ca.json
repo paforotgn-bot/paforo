@@ -11,8 +11,7 @@
   "hero": {
     "badge": "Agència digital a Tarragona",
     "title": "Solucions digitals que",
-    "titleHighlight": "impulsen el teu ",
-    "rotatingWords": ["negoci", "clínica", "botiga", "gimnàs", "restaurant", "agència", "empresa"],
+    "titleHighlight": "impulsen el teu negoci",
     "subtitle": "Ajudem a empreses a créixer amb desenvolupament web, software a mida, automatització de processos i estratègies de posicionament. Més resultats, menys temps.",
     "cta1": "Veure serveis",
     "cta2": "Contactar"
@@ -63,6 +62,11 @@
     "subtitle": "Resultats reals de clients reals. Descobreix com hem ajudat a empreses com la teva.",
     "cta": "Veure cas complet",
     "viewAll": "Veure tots els casos"
+  },
+  "portfolio": {
+    "title": "Webs que hem fet",
+    "subtitle": "Alguns dels projectes que hem dissenyat i desenvolupat. Fes clic per visitar-los.",
+    "cta": "Visitar web"
   },
   "process": {
     "title": "Com treballem",
@@ -120,7 +124,7 @@
     "selectService": "Selecciona un servei"
   },
   "logos": {
-    "title": "Confien en nosaltres"
+    "title": "Negocis que han confiat en nosaltres"
   },
   "faq": {
     "title": "Preguntes freqüents",
