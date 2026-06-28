@@ -16,7 +16,7 @@ const projects = [
     tag: 'Restaurante & eventos',
     url: 'https://www.limboobeachclub.com/',
     image: '/images/portfolio/limboo.png',
-    objectPosition: 'object-center',
+    objectPosition: 'object-[center_75%]',
   },
   {
     name: 'Fontanet Medicina i Fisioterapia',
