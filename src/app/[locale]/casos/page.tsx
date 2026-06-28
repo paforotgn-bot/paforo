@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { generatePageMetadata } from '@/lib/seo/metadata';
 import { getCaseStudies } from '@/lib/content/cases';
-import { Breadcrumbs } from '@/components/seo/breadcrumbs';
-import { Container } from '@/components/ui/container';
 import { Section, SectionHeader } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -28,15 +26,6 @@ export default async function CasosPage({ params }: { params: Promise<{ locale: 
 
   return (
     <>
-      <Container className="pt-8">
-        <Breadcrumbs
-          items={[
-            { label: dict.nav.home, href: `/${locale}` },
-            { label: dict.nav.cases, href: `/${locale}/casos` },
-          ]}
-        />
-      </Container>
-
       <Section>
         <SectionHeader title={dict.cases.title} subtitle={dict.cases.subtitle} />
 

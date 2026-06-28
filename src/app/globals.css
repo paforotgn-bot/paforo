@@ -198,10 +198,6 @@ body {
   animation: marquee 30s linear infinite;
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
 /* Scanline sweep */
 .scanline::after {
   content: '';

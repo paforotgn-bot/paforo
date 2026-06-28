@@ -7,7 +7,6 @@ import { getServiceData, getAllServiceSlugs } from '@/lib/content/services';
 import { getCaseStudies } from '@/lib/content/cases';
 import { getServiceSchema, getFAQSchema } from '@/lib/seo/structured-data';
 import { JsonLd } from '@/components/seo/json-ld';
-import { Breadcrumbs } from '@/components/seo/breadcrumbs';
 import { Container } from '@/components/ui/container';
 import { Section, SectionHeader } from '@/components/ui/section';
 import { Button } from '@/components/ui/button';
@@ -73,13 +72,6 @@ export default async function ServicePage({ params }: { params: Promise<{ locale
       {/* Hero */}
       <AuroraBackground className="aurora-soft py-20 md:py-28">
         <Container>
-          <Breadcrumbs
-            items={[
-              { label: dict.nav.home, href: `/${locale}` },
-              { label: dict.nav.services, href: `/${locale}/servicios` },
-              { label: service.title, href: `/${locale}/servicios/${slug}` },
-            ]}
-          />
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">

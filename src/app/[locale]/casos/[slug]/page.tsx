@@ -4,7 +4,6 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { generatePageMetadata } from '@/lib/seo/metadata';
 import { getCaseStudy, getCaseStudies } from '@/lib/content/cases';
-import { Breadcrumbs } from '@/components/seo/breadcrumbs';
 import { Container } from '@/components/ui/container';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -45,14 +44,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ loca
   return (
     <>
       <Container className="pt-8 pb-20">
-        <Breadcrumbs
-          items={[
-            { label: dict.nav.home, href: `/${locale}` },
-            { label: dict.nav.cases, href: `/${locale}/casos` },
-            { label: c.client, href: `/${locale}/casos/${slug}` },
-          ]}
-        />
-
         <header className="mb-12">
           <div className="flex flex-wrap gap-2 mb-4">
             {c.services.map((s) => (

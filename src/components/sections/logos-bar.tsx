@@ -12,7 +12,7 @@ interface LogosBarProps {
 // scale fine-tunes optical size: stacked logos (mark + small text) read smaller
 // at the same height, so they are nudged up to balance the row visually.
 const logos = [
-  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 2.3 },
+  { name: 'Limboo Beach Club', src: '/images/logos/limboo.png', scale: 2.1 },
   { name: 'Oravia Travel Group', src: '/images/logos/oravia.png', scale: 1.8 },
   { name: 'ZEA L\'Batarrec', src: '/images/logos/zea.png', scale: 1.0 },
   { name: 'DILEI', src: '/images/logos/dilei.png', scale: 1.0 },
@@ -57,7 +57,7 @@ export function LogosBar({ dict }: LogosBarProps) {
                 src={logo.src}
                 alt={logo.name}
                 style={{ height: `${logo.scale * 2.2}rem` }}
-                className="w-auto max-w-[210px] object-contain opacity-70 brightness-0 invert transition-all duration-300 hover:opacity-100 hover:brightness-100 hover:invert-0"
+                className="w-auto max-w-[210px] object-contain opacity-70 brightness-0 invert"
               />
             </div>
           ))}

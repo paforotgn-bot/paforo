@@ -98,13 +98,6 @@ export function MobileNav({ isOpen, onClose, navItems, locale, dict }: MobileNav
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <Link
-                      href={`/${locale}/servicios`}
-                      onClick={onClose}
-                      className="block py-2 pl-4 text-sm font-medium text-foreground"
-                    >
-                      {dict.nav.services}
-                    </Link>
                     {serviceItems.map((item) => (
                       <Link
                         key={item.href}

@@ -95,14 +95,6 @@ export function Header({ locale, dict }: HeaderProps) {
                   onMouseLeave={() => setServicesOpen(false)}
                   className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 rounded-xl border border-border bg-background shadow-lg p-2"
                 >
-                  <Link
-                    href={`/${locale}/servicios`}
-                    onClick={() => setServicesOpen(false)}
-                    className="block px-3 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-elevated transition-colors"
-                  >
-                    {dict.nav.services}
-                  </Link>
-                  <div className="my-1 border-t border-border" />
                   {serviceItems.map((item) => (
                     <Link
                       key={item.href}
@@ -137,10 +129,10 @@ export function Header({ locale, dict }: HeaderProps) {
           </nav>
 
           <div className="hidden items-center gap-2 md:flex">
-            <LanguageSwitcher />
             <Button href={`/${locale}/contacto`} size="sm">
               {dict.nav.cta}
             </Button>
+            <LanguageSwitcher />
           </div>
 
           <div className="flex items-center gap-2 md:hidden">

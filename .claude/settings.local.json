@@ -35,7 +35,16 @@
       "Bash(gh repo:*)",
       "Bash(npx vercel:*)",
       "Bash(npx puppeteer:*)",
-      "Bash(NODE_PATH=\"C:\\\\Users\\\\pafor\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\" node:*)"
+      "Bash(NODE_PATH=\"C:\\\\Users\\\\pafor\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\" node:*)",
+      "Skill(deep-research)",
+      "WebFetch(domain:www.solpronet.com)",
+      "WebFetch(domain:empresite.eleconomista.es)",
+      "WebFetch(domain:www.sortlist.es)",
+      "Bash(npx tsc *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(rm -f public/images/logos/sanssens.png)"
     ]
   }
 }

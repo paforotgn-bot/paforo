@@ -1,7 +1,5 @@
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { generatePageMetadata } from '@/lib/seo/metadata';
-import { Breadcrumbs } from '@/components/seo/breadcrumbs';
-import { Container } from '@/components/ui/container';
 import { Section } from '@/components/ui/section';
 import { ContactForm } from '@/components/forms/contact-form';
 import { NAP } from '@/lib/constants';
@@ -25,15 +23,6 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
 
   return (
     <>
-      <Container className="pt-8">
-        <Breadcrumbs
-          items={[
-            { label: dict.nav.home, href: `/${locale}` },
-            { label: dict.nav.contact, href: `/${locale}/contacto` },
-          ]}
-        />
-      </Container>
-
       <Section>
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
