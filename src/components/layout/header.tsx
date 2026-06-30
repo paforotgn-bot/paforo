@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from './language-switcher';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { MobileNav } from './mobile-nav';
 import { SERVICES } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
@@ -16,14 +17,12 @@ interface HeaderProps {
   dict: Dictionary;
 }
 
-const serviceKeys = ['web', 'software', 'automation'] as const;
+const serviceKeys = ['web', 'software'] as const;
 
 export function Header({ locale, dict }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -31,18 +30,8 @@ export function Header({ locale, dict }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setServicesOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
   const navItems = [
-    { href: `/${locale}/casos`, label: dict.nav.cases },
+    { href: `/${locale}#casos`, label: dict.nav.cases },
   ];
 
   const serviceItems = SERVICES.map((service, i) => ({
@@ -57,8 +46,8 @@ export function Header({ locale, dict }: HeaderProps) {
           className={cn(
             'mx-auto flex max-w-5xl items-center justify-between rounded-full border px-5 md:px-7 transition-all duration-300',
             scrolled
-              ? 'border-black/10 bg-white/70 py-2.5 shadow-lg shadow-black/5 backdrop-blur-xl backdrop-saturate-150'
-              : 'border-white/60 bg-white/45 py-3 shadow-md shadow-black/5 backdrop-blur-md backdrop-saturate-150'
+              ? 'border-black/10 bg-white/70 py-2.5 shadow-lg shadow-black/5 backdrop-blur-xl backdrop-saturate-150 dark:border-white/10 dark:bg-[#14141f]/70'
+              : 'border-white/60 bg-white/45 py-3 shadow-md shadow-black/5 backdrop-blur-md backdrop-saturate-150 dark:border-white/10 dark:bg-[#14141f]/50'
           )}
         >
           <Link href={`/${locale}`} className="text-xl font-bold tracking-tight">
@@ -66,55 +55,7 @@ export function Header({ locale, dict }: HeaderProps) {
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
-            {/* Services dropdown */}
-            <div ref={dropdownRef} className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                onMouseEnter={() => setServicesOpen(true)}
-                className={cn(
-                  'flex items-center gap-1 text-sm font-medium transition-colors hover:text-foreground',
-                  pathname.startsWith(`/${locale}/servicios`) ? 'text-foreground' : 'text-muted'
-                )}
-              >
-                {dict.nav.services}
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className={cn('transition-transform duration-200', servicesOpen && 'rotate-180')}
-                >
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </button>
-
-              {servicesOpen && (
-                <div
-                  onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 rounded-xl border border-border bg-background shadow-lg p-2"
-                >
-                  {serviceItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setServicesOpen(false)}
-                      className={cn(
-                        'block px-3 py-2 text-sm rounded-lg transition-colors',
-                        pathname === item.href
-                          ? 'text-violet font-medium bg-violet/5'
-                          : 'text-muted hover:text-foreground hover:bg-elevated'
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {navItems.map((item) => (
+            {[...serviceItems, ...navItems].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -132,10 +73,12 @@ export function Header({ locale, dict }: HeaderProps) {
             <Button href={`/${locale}/contacto`} size="sm">
               {dict.nav.cta}
             </Button>
+            <ThemeToggle />
             <LanguageSwitcher />
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
             <button
               onClick={() => setMobileOpen(true)}
               className="p-2 text-foreground"

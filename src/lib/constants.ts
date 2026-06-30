@@ -19,8 +19,8 @@ export const NAP = {
     postalCode: '43001',
     addressCountry: 'ES',
   },
-  phone: '+34 600 000 000',
-  email: 'hola@paforo.com',
+  phone: '+34 639 748 955',
+  email: 'paforotgn@gmail.com',
 };
 
 export const SOCIAL = {
@@ -42,11 +42,5 @@ export const SERVICES = [
     icon: '⚙️',
     image: '/images/services/desarrollo-software.png',
     color: 'cyan' as const,
-  },
-  {
-    slug: { es: 'automatizaciones', en: 'automations', ca: 'automatitzacions' },
-    icon: '🤖',
-    image: '/images/services/automatizaciones.png',
-    color: 'violet' as const,
   },
 ] as const;

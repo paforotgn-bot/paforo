@@ -14,7 +14,7 @@ interface HeroProps {
 
 export function Hero({ locale, dict }: HeroProps) {
   return (
-    <section className="relative -mt-20 min-h-screen flex items-center overflow-hidden hero-gradient">
+    <section className="relative min-h-svh flex items-center overflow-hidden hero-gradient">
       {/* Dot grid background */}
       <div className="absolute inset-0 bg-grid" />
 
@@ -60,7 +60,7 @@ export function Hero({ locale, dict }: HeroProps) {
             <Button href={`/${locale}/contacto`} size="lg" className="cta-glow">
               {dict.hero.cta1}
             </Button>
-            <Button href={`/${locale}/casos`} variant="secondary" size="lg">
+            <Button href={`/${locale}#casos`} variant="secondary" size="lg">
               {dict.hero.cta2}
             </Button>
           </motion.div>

@@ -1,43 +1,107 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #111827;
+  --muted: #4B5563;
+  --card: #F9FAFB;
+  --elevated: #F3F4F6;
+  --border: #E5E7EB;
+  --section: #F5F3FF;
+  --contrast: #111827;     /* dark band on a light page (logos, CTA) */
+  --contrast-fg: #FFFFFF;
+}
+
+.dark {
+  --background: #0B0B12;
+  --foreground: #E6E8EE;
+  --muted: #9BA3B4;
+  --card: #14141F;
+  --elevated: #1C1C2B;
+  --border: #262633;
+  --section: #101019;
+  --contrast: #14141F;     /* slightly elevated band on a dark page */
+  --contrast-fg: #FFFFFF;
+}
+
 @theme inline {
-  --color-background: #FFFFFF;
-  --color-foreground: #111827;
-  --color-muted: #4B5563;
-  --color-card: #F9FAFB;
-  --color-elevated: #F3F4F6;
-  --color-border: #E5E7EB;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-elevated: var(--elevated);
+  --color-border: var(--border);
+  --color-section: var(--section);
+  --color-contrast: var(--contrast);
+  --color-contrast-fg: var(--contrast-fg);
   --color-violet: #7C3AED;
   --color-cyan: #0891B2;
   --color-violet-dark: #6D28D9;
   --color-cyan-dark: #0E7490;
-  --color-section: #F5F3FF;
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 }
 
 html, body {
-  background-color: #FFFFFF;
-  color: #111827;
+  background-color: var(--section);
+  color: var(--foreground);
 }
 
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+/* Section separator: same background everywhere, sections set apart by a
+   hairline that fades at the edges with a soft violet accent in the centre. */
+.section-sep {
+  position: relative;
+}
+.section-sep::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92%, 1152px);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border) 25%,
+    rgba(124, 58, 237, 0.35) 50%,
+    var(--border) 75%,
+    transparent
+  );
+}
+.dark .section-sep::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border) 25%,
+    rgba(167, 139, 250, 0.4) 50%,
+    var(--border) 75%,
+    transparent
+  );
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #FFFFFF; }
-::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #6B7280; }
+::-webkit-scrollbar-track { background: var(--section); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
 /* Glass morphism for header */
 .glass {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+.dark .glass {
+  background: rgba(15, 15, 22, 0.7);
 }
 
 /* Gradient text */
@@ -68,7 +132,7 @@ body {
 /* Selection */
 ::selection {
   background: rgba(124, 58, 237, 0.15);
-  color: #111827;
+  color: var(--foreground);
 }
 
 /* Prose overrides */
@@ -80,6 +144,14 @@ body {
   --tw-prose-code: #0891B2;
   --tw-prose-quotes: #6B7280;
 }
+.dark .prose {
+  --tw-prose-body: #C7CBD6;
+  --tw-prose-headings: #F3F4F6;
+  --tw-prose-links: #A78BFA;
+  --tw-prose-bold: #F3F4F6;
+  --tw-prose-code: #22D3EE;
+  --tw-prose-quotes: #9BA3B4;
+}
 
 /* ============================================
    HERO EFFECTS
@@ -90,6 +162,10 @@ body {
   background: linear-gradient(-45deg, #FFFFFF, #f3eeff, #eaf7fa, #FFFFFF, #f0eaff, #e8f6f9);
   background-size: 300% 300%;
   animation: gradient-move 12s ease infinite;
+}
+.dark .hero-gradient {
+  background: linear-gradient(-45deg, #0B0B12, #16112b, #0c1c22, #0B0B12, #140f28, #0b191f);
+  background-size: 300% 300%;
 }
 
 @keyframes gradient-move {
@@ -104,6 +180,9 @@ body {
 .bg-grid {
   background-image: radial-gradient(circle, rgba(124, 58, 237, 0.07) 1px, transparent 1px);
   background-size: 32px 32px;
+}
+.dark .bg-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 /* Floating orbs */
@@ -233,4 +312,17 @@ body {
   background: linear-gradient(-45deg, #FFFFFF, #f3eeff, #eaf7fa, #FFFFFF);
   background-size: 200% 200%;
   animation: gradient-move 15s ease infinite;
+}
+.dark .aurora-soft {
+  background: linear-gradient(-45deg, #0B0B12, #16112b, #0c1c22, #0B0B12);
+  background-size: 200% 200%;
+}
+
+/* Hide scrollbar (carousel track) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

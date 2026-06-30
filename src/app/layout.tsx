@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://paforo.com'),
   title: 'Paforo - Soluciones digitales que impulsan tu negocio',
   description:
-    'Agencia de soluciones digitales. Desarrollo web, software a medida, automatización de procesos, SEO y GEO para empresas.',
+    'Agencia de soluciones digitales. Desarrollo web y software a medida para empresas.',
 };
 
 export default function RootLayout({
@@ -29,9 +29,17 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      suppressHydrationWarning
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-foreground font-sans">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark');}catch(e){}})();`,
+          }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         {children}
       </body>
     </html>

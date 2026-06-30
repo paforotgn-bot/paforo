@@ -15,7 +15,15 @@ export interface CaseStudy {
   description: string;
   date: string;
   image?: string;
+  cardImage?: string;
+  cardVideo?: string;
+  imagePosition?: string;
+  imageFit?: string;
+  coverWidth?: string;
+  url?: string;
+  video?: string;
   images?: string[];
+  gallery?: string;
   services: string[];
   results: {
     label: string;
@@ -74,7 +82,6 @@ export interface Dictionary {
     cta: string;
     web: { title: string; description: string };
     software: { title: string; description: string };
-    automation: { title: string; description: string };
   };
   cases: {
     title: string;
@@ -124,6 +131,7 @@ export interface Dictionary {
     success: string;
     error: string;
     selectService: string;
+    consultancy: string;
   };
   whoWeAre: {
     title: string;

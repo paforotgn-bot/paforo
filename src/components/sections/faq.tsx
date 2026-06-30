@@ -23,7 +23,7 @@ export function FAQ({ title = 'Preguntas frecuentes', subtitle, faqs }: FAQProps
           <div
             key={i}
             className={cn(
-              'rounded-xl border bg-white overflow-hidden transition-all duration-300',
+              'rounded-xl border bg-card overflow-hidden transition-all duration-300',
               openIndex === i
                 ? 'border-violet/30 shadow-[0_4px_24px_rgba(124,58,237,0.08)]'
                 : 'border-border hover:border-violet/20'

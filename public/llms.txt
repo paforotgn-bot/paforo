@@ -1,25 +1,26 @@
 # Paforo
 
-> Agencia de soluciones digitales. Desarrollo web, software a medida, automatización de procesos, SEO y GEO (Generative Engine Optimization).
+> Agencia digital especializada en desarrollo web y software a medida para empresas. Resultados medibles, 100% remoto, clientes de cualquier parte del mundo.
 
-## Servicios principales
-- [Desarrollo Web](https://paforo.com/es/servicios/desarrollo-web): Webs profesionales con Next.js, React y Tailwind CSS. Rendimiento, accesibilidad y SEO integrado.
-- [Desarrollo Software](https://paforo.com/es/servicios/desarrollo-software): Software a medida, APIs, dashboards, integraciones y aplicaciones empresariales.
-- [Soluciones Digitales](https://paforo.com/es/servicios/soluciones-digitales): Transformación digital integral, consultoría, estrategia y marketing digital.
-- [Automatizaciones](https://paforo.com/es/servicios/automatizaciones): Workflows automatizados, bots, email automation, integraciones y RPA.
-- [GEO](https://paforo.com/es/servicios/geo): Posicionamiento en ChatGPT, Google AI Overviews, Perplexity y motores de IA generativa.
-- [SEO](https://paforo.com/es/servicios/seo): SEO técnico, contenido, link building y analítica para posicionamiento en Google.
+## Servicios
+- [Desarrollo Web](https://paforo.com/es/servicios/desarrollo-web): La web más atractiva de tu sector y la que más convierte. Diseño a medida, velocidad real y pensada para traer clientes.
+- [Desarrollo Software](https://paforo.com/es/servicios/desarrollo-software): Software a medida que se ajusta a la lógica de tu negocio: automatiza procesos, centraliza tu información y te ahorra horas.
+
+## Casos de éxito
+- [Software de gestión para clínica de rehabilitación](https://paforo.com/es/casos/software-rehabilitacion-fontanet): Digitalización de 20+ años de fichas en papel con un software a medida: asistencia global, justificantes en un clic y estadísticas reales para decidir.
+- [Buzón de voz con IA](https://paforo.com/es/casos/buzon-voz-ia): Automatización del buzón de voz con inteligencia artificial.
+- [Formulario de inscripciones online](https://paforo.com/es/casos/formulario-inscripciones): Formulario con pasarela de pago que eliminó el papeleo y las gestiones por WhatsApp de una asociación deportiva.
+- [Fontanet: web posicionada en Google](https://paforo.com/es/casos/fontanet-web): Web médica extensa con muchas páginas en las primeras posiciones de Google.
+- [Limboo Beach Club](https://paforo.com/es/casos/limboo): Web para un beach club.
+- [ZEA L'Batarrec](https://paforo.com/es/casos/zea-web): Web para restaurante.
 
 ## Páginas principales
-- [Home](https://paforo.com/es): Página principal con servicios, casos de éxito y proceso de trabajo.
-- [Servicios](https://paforo.com/es/servicios): Listado completo de servicios digitales.
-- [Casos de éxito](https://paforo.com/es/casos): Resultados reales de clientes reales.
-- [Nosotros](https://paforo.com/es/nosotros): Información sobre la agencia, misión y valores.
+- [Home](https://paforo.com/es): Servicios, casos de éxito y proceso de trabajo.
 - [Contacto](https://paforo.com/es/contacto): Formulario de contacto para proyectos.
 
 ## Información clave
-- Sector: Agencia digital, desarrollo web, software, SEO, GEO
-- Modalidad: 100% remoto, clientes de cualquier parte del mundo
-- Contacto: hola@paforo.com
+- Sector: Agencia digital, desarrollo web y software a medida
+- Modalidad: 100% remoto, clientes internacionales
+- Contacto: paforotgn@gmail.com
 - Web: https://paforo.com
 - Idiomas: Español, English, Català

@@ -13,20 +13,20 @@ interface PortfolioProps {
 const projects = [
   {
     name: 'Limboo Beach Club',
-    tag: 'Restaurante & eventos',
+    tag: 'Carta digital premium, reservas online y gestión de eventos.',
     url: 'https://www.limboobeachclub.com/',
     image: '/images/portfolio/limboo.png',
-    objectPosition: 'object-[center_75%]',
+    objectPosition: 'object-[center_65%]',
   },
   {
     name: 'Fontanet Medicina i Fisioterapia',
-    tag: 'Clínica',
+    tag: 'Web extensa con muchas de sus páginas posicionadas en las primeras posiciones de Google.',
     url: 'https://fontanettgn.es/',
-    image: '/images/portfolio/fontanettgn.avif',
+    image: '/images/portfolio/fontanet.avif',
   },
   {
-    name: 'ZEA L\'Batarrec',
-    tag: 'Zona esportiva',
+    name: 'Zona Esportiva Albatarrec',
+    tag: 'Pasarela de pago integrada que simplifica la gestión administrativa y aumenta las inscripciones.',
     url: 'https://zealbatarrec.com/',
     image: '/images/portfolio/zealbatarrec.jpg',
   },
@@ -52,9 +52,9 @@ export function Portfolio({ dict }: PortfolioProps) {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ y: -6 }}
-            className="group block overflow-hidden rounded-2xl border border-border bg-background transition-all duration-300 hover:border-violet/30 hover:shadow-[0_8px_32px_rgba(124,58,237,0.12)]"
+            className="group block"
           >
-            <div className="relative aspect-[16/10] overflow-hidden">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-background transition-all duration-300 group-hover:border-violet/30 group-hover:shadow-[0_8px_32px_rgba(124,58,237,0.12)]">
               <Image
                 src={project.image}
                 alt={project.name}
@@ -65,18 +65,9 @@ export function Portfolio({ dict }: PortfolioProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </div>
 
-            <div className="flex items-center justify-between gap-4 p-6">
-              <div>
-                <h3 className="font-bold leading-tight">{project.name}</h3>
-                <p className="mt-1 text-sm text-muted">{project.tag}</p>
-              </div>
-              <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-violet">
-                {dict.portfolio.cta}
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <path d="M7 17 17 7" />
-                  <path d="M7 7h10v10" />
-                </svg>
-              </span>
+            <div className="mt-4">
+              <h3 className="font-bold leading-tight">{project.name}</h3>
+              <p className="mt-1 text-sm text-muted">{project.tag}</p>
             </div>
           </motion.a>
         ))}

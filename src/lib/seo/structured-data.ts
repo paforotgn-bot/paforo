@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME, NAP, SOCIAL, SERVICES } from '@/lib/constants';
+import { SITE_URL, SITE_NAME, NAP, SERVICES } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 
 export function getOrganizationSchema() {
@@ -8,7 +8,6 @@ export function getOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    sameAs: Object.values(SOCIAL),
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: NAP.phone,
@@ -45,7 +44,6 @@ export function getLocalBusinessSchema() {
       opens: '09:00',
       closes: '18:00',
     },
-    sameAs: Object.values(SOCIAL),
   };
 }
 

@@ -54,7 +54,7 @@ export function AboutPreview({ locale, dict }: AboutPreviewProps) {
             {dict.about.valuesItems.map((value, i) => (
               <div
                 key={value.title}
-                className={`rounded-xl border border-border border-t-2 ${cardAccents[i]} bg-white p-5 card-glow transition-all duration-300 hover:border-violet/25`}
+                className={`rounded-xl border border-border border-t-2 ${cardAccents[i]} bg-card p-5 card-glow transition-all duration-300 hover:border-violet/25`}
               >
                 <div className="mb-3 font-mono text-3xl font-bold gradient-text">
                   {['01', '02', '03', '04'][i]}

@@ -16,7 +16,8 @@ export async function POST(request: Request) {
 
       await resend.emails.send({
         from: 'Paforo Web <noreply@paforo.com>',
-        to: ['hola@paforo.com'],
+        to: [process.env.CONTACT_TO_EMAIL || 'paforotgn@gmail.com'],
+        replyTo: email,
         subject: `Nuevo contacto: ${name} - ${service || 'General'}`,
         html: `
           <h2>Nuevo mensaje de contacto</h2>

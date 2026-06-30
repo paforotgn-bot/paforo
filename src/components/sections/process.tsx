@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Section, SectionHeader } from '@/components/ui/section';
-import { fadeInUp, staggerContainer } from '@/lib/animations';
+import { cleanFadeUp, staggerContainer } from '@/lib/animations';
 import type { Dictionary } from '@/types';
 
 interface ProcessProps {
@@ -37,7 +37,7 @@ export function Process({ dict }: ProcessProps) {
           {dict.process.steps.map((step, i) => (
             <motion.div
               key={i}
-              variants={fadeInUp}
+              variants={cleanFadeUp}
               className="relative flex gap-6 items-start"
             >
               {/* Step number */}
@@ -48,7 +48,7 @@ export function Process({ dict }: ProcessProps) {
               </div>
 
               {/* Content */}
-              <div className="flex-1 rounded-xl border border-border bg-white p-6 transition-all duration-300 hover:border-violet/25 hover:shadow-[0_4px_24px_rgba(124,58,237,0.06)]">
+              <div className="flex-1 rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:border-violet/25 hover:shadow-[0_4px_24px_rgba(124,58,237,0.06)]">
                 <h3 className="text-lg font-bold mb-2">{step.title}</h3>
                 <p className="text-foreground/70 leading-relaxed">{step.description}</p>
               </div>

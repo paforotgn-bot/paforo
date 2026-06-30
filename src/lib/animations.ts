@@ -14,6 +14,15 @@ export const fadeInUp = {
   transition: { duration: 0.6, ease: smoothEase } satisfies Transition,
 };
 
+export const cleanFadeUp: Variants = {
+  initial: { opacity: 0, y: 16 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: smoothEase },
+  },
+};
+
 export const staggerContainer: Variants = {
   animate: {
     transition: {

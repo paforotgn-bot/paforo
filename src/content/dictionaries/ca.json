@@ -11,7 +11,7 @@
     "badge": "Agència digital",
     "title": "Solucions digitals que",
     "titleHighlight": "impulsen el teu negoci",
-    "subtitle": "Ajudem a empreses a créixer amb desenvolupament web, software a mida i automatització de processos amb IA. Més resultats, menys temps.",
+    "subtitle": "Ajudem a empreses a créixer amb desenvolupament web i software a mida. Més resultats, menys temps.",
     "cta1": "Parla'ns del teu projecte",
     "cta2": "Veure casos d'èxit"
   },
@@ -38,15 +38,11 @@
     "software": {
       "title": "Desenvolupament Software",
       "description": "Software a mida per automatitzar i escalar el teu negoci. APIs, dashboards, integracions."
-    },
-    "automation": {
-      "title": "Automatitzacions",
-      "description": "Automatitza processos repetitius i allibera temps per al que importa. Workflows, bots, integracions."
     }
   },
   "cases": {
     "title": "Casos d'èxit",
-    "subtitle": "Resultats reals de clients reals. Descobreix com hem ajudat a empreses com la teva.",
+    "subtitle": "Resultats reals de clients reals.\nDescobreix com hem ajudat a empreses com la teva.",
     "cta": "Veure cas complet",
     "viewAll": "Veure tots els casos"
   },
@@ -57,23 +53,23 @@
   },
   "process": {
     "title": "Com treballem",
-    "subtitle": "Sense voltes. Entenem el teu negoci, executem ràpid i mesurem tot.",
+    "subtitle": "Un procés clar de principi a fi.\nSaps en tot moment què passa i per què.",
     "steps": [
       {
-        "title": "T'escoltem",
-        "description": "Ens asseiem amb tu, entenem què necessites i quin problema real estem resolent. Sense argot, sense fum."
+        "title": "Entenem el problema",
+        "description": "Ens reunim amb tu les vegades que calgui fins a tenir claríssim què s'ha de resoldre. Si això no està ben lligat, no s'escriu ni una línia de codi."
       },
       {
-        "title": "Proposem un pla clar",
-        "description": "Et presentem què farem, amb quins terminis i quins resultats esperar. Si no té sentit, t'ho diem."
+        "title": "Desenvolupament amb seguiment",
+        "description": "Construïm amb seguiment constant. Vas veient l'avenç i ho ajustem a la carta segons el que necessitis, sense sorpreses al final."
       },
       {
-        "title": "Construïm i llancem",
-        "description": "Desenvolupament iteratiu amb lliuraments cada setmana. Veus el progrés en temps real i pots donar feedback a cada sprint."
+        "title": "Lliurament i últims retocs",
+        "description": "Et lliurem una primera versió funcional (MVP) i afinem les últimes correccions amb tu fins que quedi com la vols."
       },
       {
-        "title": "Mesurem i millorem",
-        "description": "Després del llançament, mesurem l'impacte real. Dades, no suposicions. I seguim optimitzant."
+        "title": "Manteniment i millores",
+        "description": "Seguim amb tu: manteniment i actualitzacions contínues perquè el teu web o software no es quedi mai desfasat."
       }
     ]
   },
@@ -87,7 +83,7 @@
     "button": "Reservar consultoria gratuïta"
   },
   "footer": {
-    "description": "Agència de solucions digitals. Desenvolupament web, software a mida, automatització de processos, SEO i GEO.",
+    "description": "Agència digital especialitzada en desenvolupament web i software a mida. Creem webs que enamoren i converteixen, i solucions a l'altura del teu negoci.",
     "services": "Serveis",
     "company": "Empresa",
     "legal": "Legal",
@@ -108,7 +104,8 @@
     "submit": "Enviar missatge",
     "success": "Missatge enviat correctament. Et contactarem aviat.",
     "error": "Error en enviar el missatge. Torna-ho a intentar.",
-    "selectService": "Selecciona un servei"
+    "selectService": "Selecciona un servei",
+    "consultancy": "Consultoria gratuïta"
   },
   "logos": {
     "title": "Negocis que ja han confiat en nosaltres"

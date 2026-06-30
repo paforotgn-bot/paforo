@@ -41,7 +41,7 @@ export function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-muted hover:text-foreground transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-muted hover:text-foreground transition-colors"
         aria-label="Change language"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -52,7 +52,7 @@ export function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute top-full right-0 mt-2 w-24 rounded-lg border border-border bg-white shadow-lg p-1">
+        <div className="absolute top-full right-0 mt-2 w-24 rounded-lg border border-border bg-card shadow-lg p-1">
           {LOCALES.map((locale) => (
             <Link
               key={locale}

@@ -2,7 +2,6 @@
 
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
-import { fadeInUp } from '@/lib/animations';
 
 interface GlowCardProps {
   children: React.ReactNode;
@@ -14,8 +13,10 @@ interface GlowCardProps {
 export function GlowCard({ children, className, color = 'violet', delay = 0 }: GlowCardProps) {
   return (
     <motion.div
-      {...fadeInUp}
-      transition={{ ...fadeInUp.transition, delay }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay }}
       whileHover={{ y: -6 }}
       className={cn(
         'group relative rounded-2xl border border-border bg-background p-6 transition-all duration-300',

@@ -14,7 +14,7 @@ interface CTASectionProps {
 
 export function CTASection({ locale, dict }: CTASectionProps) {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-foreground">
+    <section className="section-sep relative py-24 md:py-32 overflow-hidden">
       {/* Background gradient orbs */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet/20 rounded-full blur-[100px]" />
@@ -29,12 +29,12 @@ export function CTASection({ locale, dict }: CTASectionProps) {
           transition={fadeInUp.transition}
           className="mx-auto max-w-3xl text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-white">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             {dict.cta.title}
           </h2>
-          <p className="mt-4 text-lg text-white/60">{dict.cta.subtitle}</p>
+          <p className="mt-4 text-lg text-muted">{dict.cta.subtitle}</p>
           <div className="mt-10">
-            <Button href={`/${locale}/contacto`} size="lg" className="cta-glow">
+            <Button href={`/${locale}/contacto?servicio=consultoria`} size="lg" className="cta-glow">
               {dict.cta.button}
             </Button>
           </div>

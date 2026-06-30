@@ -14,7 +14,7 @@ export function Input({ label, error, className, id, ...props }: InputProps) {
       <input
         id={id}
         className={cn(
-          'w-full rounded-lg border border-border bg-white px-4 py-3 text-foreground placeholder:text-muted/50 focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors',
+          'w-full rounded-lg border border-border bg-card px-4 py-3 text-foreground placeholder:text-muted/50 focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors',
           error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
           className
         )}
@@ -39,7 +39,7 @@ export function Textarea({ label, error, className, id, ...props }: TextareaProp
       <textarea
         id={id}
         className={cn(
-          'w-full rounded-lg border border-border bg-white px-4 py-3 text-foreground placeholder:text-muted/50 focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors min-h-[120px] resize-y',
+          'w-full rounded-lg border border-border bg-card px-4 py-3 text-foreground placeholder:text-muted/50 focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors min-h-[120px] resize-y',
           error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
           className
         )}
@@ -65,7 +65,7 @@ export function Select({ label, error, className, id, options, ...props }: Selec
       <select
         id={id}
         className={cn(
-          'w-full rounded-lg border border-border bg-white px-4 py-3 text-foreground focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors',
+          'w-full rounded-lg border border-border bg-card px-4 py-3 text-foreground focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors',
           error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
           className
         )}

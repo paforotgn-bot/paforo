@@ -16,7 +16,7 @@ const variants = {
   primary:
     'bg-gradient-to-r from-violet to-cyan text-white hover:opacity-90 shadow-lg shadow-violet/15',
   secondary:
-    'border border-border bg-white text-foreground hover:bg-elevated hover:border-muted',
+    'border border-border bg-card text-foreground hover:bg-elevated hover:border-muted',
   ghost: 'text-muted hover:text-foreground hover:bg-elevated',
 };
 

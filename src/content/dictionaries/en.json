@@ -11,7 +11,7 @@
     "badge": "Digital agency",
     "title": "Digital solutions that",
     "titleHighlight": "drive your business",
-    "subtitle": "We help businesses grow with web development, custom software and AI-powered process automation. More results, less time.",
+    "subtitle": "We help businesses grow with web development and custom software. More results, less time.",
     "cta1": "Tell us about your project",
     "cta2": "View case studies"
   },
@@ -38,15 +38,11 @@
     "software": {
       "title": "Software Development",
       "description": "Custom software to automate and scale your business. APIs, dashboards, integrations."
-    },
-    "automation": {
-      "title": "Automations",
-      "description": "Automate repetitive processes and free up time for what matters. Workflows, bots, integrations."
     }
   },
   "cases": {
     "title": "Case Studies",
-    "subtitle": "Real results from real clients. Discover how we've helped businesses like yours.",
+    "subtitle": "Real results from real clients.\nDiscover how we've helped businesses like yours.",
     "cta": "View full case",
     "viewAll": "View all cases"
   },
@@ -57,23 +53,23 @@
   },
   "process": {
     "title": "How we work",
-    "subtitle": "No fluff. We understand your business, execute fast and measure everything.",
+    "subtitle": "A clear process from start to finish.\nYou always know what's happening and why.",
     "steps": [
       {
-        "title": "We listen",
-        "description": "We sit down with you, understand what you need and what real problem we're solving. No jargon, no smoke."
+        "title": "We pin down the problem",
+        "description": "We meet with you as many times as it takes until it's crystal clear what we need to solve. If that isn't nailed down, not a single line of code gets written."
       },
       {
-        "title": "We propose a clear plan",
-        "description": "We present what we'll do, with what timelines and what results to expect. If it doesn't make sense, we tell you."
+        "title": "Development with follow-up",
+        "description": "We build with constant follow-up. You see the progress and we tailor it to whatever you need, with no surprises at the end."
       },
       {
-        "title": "We build and launch",
-        "description": "Iterative development with weekly deliveries. You see progress in real time and can give feedback every sprint."
+        "title": "Delivery and final touches",
+        "description": "We hand over a first working version (MVP) and fine-tune the last corrections with you until it's exactly how you want it."
       },
       {
-        "title": "We measure and improve",
-        "description": "After launch, we measure the real impact. Data, not assumptions. And we keep optimizing."
+        "title": "Maintenance and improvements",
+        "description": "We stay with you: ongoing maintenance and updates so your website or software never falls behind."
       }
     ]
   },
@@ -87,7 +83,7 @@
     "button": "Book free consultation"
   },
   "footer": {
-    "description": "Digital solutions agency. Web development, custom software, process automation, SEO and GEO.",
+    "description": "Digital agency specialized in web development and custom software. We build websites that convert and solutions that match your business.",
     "services": "Services",
     "company": "Company",
     "legal": "Legal",
@@ -108,7 +104,8 @@
     "submit": "Send message",
     "success": "Message sent successfully. We'll contact you soon.",
     "error": "Error sending message. Please try again.",
-    "selectService": "Select a service"
+    "selectService": "Select a service",
+    "consultancy": "Free consultation"
   },
   "logos": {
     "title": "Businesses that already trust us"

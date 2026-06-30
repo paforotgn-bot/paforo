@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -41,12 +40,24 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ loca
 
   if (!c) notFound();
 
+  const coverMax =
+    ({
+      xs: 'max-w-xs',
+      sm: 'max-w-sm',
+      md: 'max-w-md',
+      lg: 'max-w-lg',
+      xl: 'max-w-xl',
+      '2xl': 'max-w-2xl',
+      '3xl': 'max-w-3xl',
+    } as Record<string, string>)[c.coverWidth ?? '3xl'] ?? 'max-w-3xl';
+
   return (
     <>
-      <Container className="pt-8 pb-20">
+      <Container className="pt-28 pb-20">
+        <div className="mx-auto max-w-5xl">
         <header className="mb-12">
           <div className="flex flex-wrap gap-2 mb-4">
-            {c.services.map((s) => (
+            {c.services.filter((s) => !/automat/i.test(s)).map((s) => (
               <Badge key={s} variant="violet">{s}</Badge>
             ))}
           </div>
@@ -65,20 +76,39 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ loca
           </div>
         </header>
 
-        {c.image && (
-          <div className="mb-12 overflow-hidden rounded-2xl border border-border">
-            <Image
-              src={c.image}
-              alt={`Dashboard - ${c.title}`}
-              width={1400}
-              height={700}
-              className="w-full h-auto"
-            />
-          </div>
-        )}
+        {c.image && (() => {
+          const cover = (
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={c.image} alt={c.title} className="block w-full h-auto" />
+              {c.url && (
+                <div className="absolute inset-0 flex items-center justify-center bg-foreground/0 transition-colors duration-300 group-hover:bg-foreground/70">
+                  <span className="inline-flex translate-y-1 items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                    {locale === 'en' ? 'Visit the website' : locale === 'ca' ? 'Visitar el web' : 'Visitar la web'}
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+                  </span>
+                </div>
+              )}
+            </>
+          );
+          return c.url ? (
+            <a
+              href={c.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group relative mx-auto mb-12 block ${coverMax} overflow-hidden rounded-2xl border border-border`}
+            >
+              {cover}
+            </a>
+          ) : (
+            <div className={`relative mx-auto mb-12 ${coverMax} overflow-hidden rounded-2xl border border-border`}>
+              {cover}
+            </div>
+          );
+        })()}
 
-        {c.images && c.images.length > 0 ? (() => {
-          const marker = /^## (Los resultados|The results|Els resultats)/m;
+        {(c.video || (c.images && c.images.length > 0)) ? (() => {
+          const marker = /^## (Los resultados|The results|Els resultats|El resultado|El resultat)/m;
           const match = c.content.match(marker);
           const splitIndex = match?.index ?? c.content.length;
           const before = c.content.slice(0, splitIndex);
@@ -89,18 +119,46 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ loca
                 <MDXRemote source={before} />
               </div>
 
-              <div className="my-12 flex justify-center items-stretch gap-6">
-                {c.images.map((img, i) => (
-                  <div key={i} className="w-48 sm:w-56 rounded-2xl border border-border bg-white p-1.5 shadow-lg flex flex-col">
+              {c.gallery === 'full' ? (
+                <div className="my-12 flex flex-col items-center gap-8">
+                  {c.images?.map((img, i) => (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
+                      key={i}
                       src={img}
                       alt={`${c.title} - captura ${i + 1}`}
-                      className="w-full rounded-xl"
+                      className="max-h-[420px] w-auto max-w-2xl rounded-2xl border border-border shadow-sm"
                     />
-                    <div className="flex-1 bg-white rounded-b-xl" />
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="my-12 flex flex-wrap justify-center items-stretch gap-6">
+                  {c.video && (
+                    <div className="w-48 sm:w-56 rounded-2xl border border-border bg-white p-1.5 shadow-lg flex flex-col">
+                      <video
+                        src={c.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full rounded-xl"
+                      />
+                      <div className="flex-1 bg-white rounded-b-xl" />
+                    </div>
+                  )}
+                  {c.images?.map((img, i) => (
+                    <div key={i} className="w-48 sm:w-56 rounded-2xl border border-border bg-white p-1.5 shadow-lg flex flex-col">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={img}
+                        alt={`${c.title} - captura ${i + 1}`}
+                        className="w-full rounded-xl"
+                      />
+                      <div className="flex-1 bg-white rounded-b-xl" />
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {after && (
                 <div className="prose prose-lg max-w-3xl prose-headings:text-foreground prose-p:text-muted prose-a:text-violet prose-strong:text-foreground">
@@ -125,6 +183,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ loca
           <Button href={`/${locale}/contacto`} size="lg">
             {dict.cta.button}
           </Button>
+        </div>
         </div>
       </Container>
     </>

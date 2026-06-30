@@ -23,19 +23,16 @@ const logos = [
 
 export function LogosBar({ dict }: LogosBarProps) {
   return (
-    <section className="py-20 md:py-28 bg-foreground overflow-hidden">
+    <section className="section-sep py-12 md:py-16 overflow-hidden">
       <Container>
         <motion.div
           initial={fadeInUp.initial}
           whileInView={fadeInUp.animate}
           viewport={{ once: true }}
           transition={fadeInUp.transition}
-          className="text-center mb-14 md:mb-16"
+          className="text-center mb-8 md:mb-10"
         >
-          <div className="flex justify-center mb-6">
-            <div className="section-gradient-line" />
-          </div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-white">
+          <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
             {dict.logos.title}
           </h2>
         </motion.div>
@@ -43,8 +40,8 @@ export function LogosBar({ dict }: LogosBarProps) {
 
       {/* Full-bleed marquee so the edge fades reach the viewport edges */}
       <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-28 md:w-40 bg-gradient-to-r from-foreground to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-28 md:w-40 bg-gradient-to-l from-foreground to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-28 md:w-40 bg-gradient-to-r from-section to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-28 md:w-40 bg-gradient-to-l from-section to-transparent" />
 
         <div className="flex w-max animate-marquee items-center">
           {[...logos, ...logos].map((logo, i) => (
@@ -57,7 +54,7 @@ export function LogosBar({ dict }: LogosBarProps) {
                 src={logo.src}
                 alt={logo.name}
                 style={{ height: `${logo.scale * 2.2}rem` }}
-                className="w-auto max-w-[210px] object-contain opacity-70 brightness-0 invert"
+                className="w-auto max-w-[210px] object-contain opacity-50 [filter:brightness(0)_saturate(100%)_invert(23%)_sepia(97%)_saturate(2492%)_hue-rotate(258deg)_brightness(92%)_contrast(101%)] dark:[filter:brightness(0)_invert(1)]"
               />
             </div>
           ))}

@@ -11,7 +11,7 @@
     "badge": "Agencia digital",
     "title": "Soluciones digitales que",
     "titleHighlight": "impulsan tu negocio",
-    "subtitle": "Ayudamos a empresas a crecer con desarrollo web, software a medida y automatización de procesos con IA. Más resultados, menos tiempo.",
+    "subtitle": "Ayudamos a empresas a crecer con desarrollo web y software a medida. Más resultados, menos tiempo.",
     "cta1": "Háblanos de tu proyecto",
     "cta2": "Ver casos de éxito"
   },
@@ -33,47 +33,43 @@
     "cta": "Más información",
     "web": {
       "title": "Desarrollo Web",
-      "description": "Webs rápidas, accesibles y optimizadas para conversión. Next.js, React y las mejores tecnologías."
+      "description": "La mejor web de tu sector: la que deja a tu competencia en evidencia, enamora a quien entra y convierte visitas en clientes."
     },
     "software": {
       "title": "Desarrollo Software",
-      "description": "Software a medida para automatizar y escalar tu negocio. APIs, dashboards, integraciones."
-    },
-    "automation": {
-      "title": "Automatizaciones",
-      "description": "Automatiza procesos repetitivos y libera tiempo para lo que importa. Workflows, bots, integraciones."
+      "description": "Software único, hecho a la medida de tu negocio: te ahorra horas, automatiza procesos y crece contigo."
     }
   },
   "cases": {
     "title": "Casos de éxito",
-    "subtitle": "Resultados reales de clientes reales. Descubre cómo hemos ayudado a empresas como la tuya.",
+    "subtitle": "Resultados reales de clientes reales.\nDescubre cómo hemos ayudado a empresas como la tuya.",
     "cta": "Ver caso completo",
     "viewAll": "Ver todos los casos"
   },
   "portfolio": {
-    "title": "Webs que hemos hecho",
-    "subtitle": "Algunos de los proyectos que hemos diseñado y desarrollado. Haz clic para visitarlos.",
+    "title": "Algunos de los proyectos que hemos desarrollado",
+    "subtitle": "Haz clic para visitarlos.",
     "cta": "Visitar web"
   },
   "process": {
     "title": "Cómo trabajamos",
-    "subtitle": "Sin rodeos. Entendemos tu negocio, ejecutamos rápido y medimos todo.",
+    "subtitle": "Un proceso claro de principio a fin.\nSabes en todo momento qué pasa y por qué.",
     "steps": [
       {
-        "title": "Te escuchamos",
-        "description": "Nos sentamos contigo, entendemos qué necesitas y qué problema real estamos resolviendo. Sin jerga, sin humo."
+        "title": "Entendemos el problema",
+        "description": "Nos reunimos contigo las veces que haga falta hasta tener clarísimo qué hay que resolver. Si esto no está bien atado, no se escribe ni una línea de código."
       },
       {
-        "title": "Proponemos un plan claro",
-        "description": "Te presentamos qué vamos a hacer, con qué plazos y qué resultados esperar. Si no tiene sentido, te lo decimos."
+        "title": "Desarrollo con seguimiento",
+        "description": "Construimos con seguimiento constante. Vas viendo el avance y lo ajustamos a la carta según lo que necesites, sin sorpresas al final."
       },
       {
-        "title": "Construimos y lanzamos",
-        "description": "Desarrollo iterativo con entregas cada semana. Ves el progreso en tiempo real y puedes dar feedback en cada sprint."
+        "title": "Entrega y últimos retoques",
+        "description": "Te entregamos una primera versión funcional (MVP) y afinamos las últimas correcciones contigo hasta que quede como lo quieres."
       },
       {
-        "title": "Medimos y mejoramos",
-        "description": "Después del lanzamiento, medimos el impacto real. Datos, no suposiciones. Y seguimos optimizando."
+        "title": "Mantenimiento y mejoras",
+        "description": "Seguimos contigo: mantenimiento y actualizaciones continuas para que tu web o software nunca se quede desfasado."
       }
     ]
   },
@@ -87,7 +83,7 @@
     "button": "Reservar consultoría gratuita"
   },
   "footer": {
-    "description": "Agencia de soluciones digitales. Desarrollo web, software a medida, automatización de procesos, SEO y GEO.",
+    "description": "Agencia digital especializada en desarrollo web y software a medida. Creamos webs que enamoran y convierten, y soluciones a la altura de tu negocio.",
     "services": "Servicios",
     "company": "Empresa",
     "legal": "Legal",
@@ -108,7 +104,8 @@
     "submit": "Enviar mensaje",
     "success": "Mensaje enviado correctamente. Te contactaremos pronto.",
     "error": "Error al enviar el mensaje. Inténtalo de nuevo.",
-    "selectService": "Selecciona un servicio"
+    "selectService": "Selecciona un servicio",
+    "consultancy": "Consultoría gratuita"
   },
   "logos": {
     "title": "Negocios que ya han confiado en nosotros"

@@ -55,7 +55,7 @@ export function AnimatedCounter({
           {suffix}
         </span>
       </div>
-      <p className="mt-3 text-sm text-white/60 uppercase tracking-wider">{label}</p>
+      <p className="mt-3 text-sm text-muted uppercase tracking-wider">{label}</p>
     </motion.div>
   );
 }

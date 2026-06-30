@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input, Textarea, Select } from '@/components/ui/input';
 import type { Dictionary } from '@/types';
@@ -9,9 +9,25 @@ interface ContactFormProps {
   dict: Dictionary;
 }
 
+// Maps the ?servicio= URL param (set by the service / consultancy CTAs)
+// onto the form's service option values.
+const PARAM_TO_SERVICE: Record<string, string> = {
+  web: 'web',
+  software: 'software',
+  consultoria: 'consultancy',
+  consultancy: 'consultancy',
+};
+
 export function ContactForm({ dict }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [service, setService] = useState('');
+
+  // Pre-select the service from the ?servicio= param when arriving from a CTA.
+  useEffect(() => {
+    const param = new URLSearchParams(window.location.search).get('servicio');
+    if (param && PARAM_TO_SERVICE[param]) setService(PARAM_TO_SERVICE[param]);
+  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -60,9 +76,9 @@ export function ContactForm({ dict }: ContactFormProps) {
 
   const serviceOptions = [
     { value: '', label: dict.contact.selectService },
+    { value: 'consultancy', label: dict.contact.consultancy },
     { value: 'web', label: dict.services.web.title },
     { value: 'software', label: dict.services.software.title },
-    { value: 'automation', label: dict.services.automation.title },
   ];
 
   if (status === 'success') {
@@ -114,6 +130,8 @@ export function ContactForm({ dict }: ContactFormProps) {
         name="service"
         label={dict.contact.service}
         options={serviceOptions}
+        value={service}
+        onChange={(e) => setService(e.target.value)}
       />
       <Textarea
         id="message"
