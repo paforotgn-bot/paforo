@@ -32,7 +32,7 @@ export function Footer({ locale, dict }: FooterProps) {
           </div>
 
           {/* Links */}
-          <div className="flex gap-20 lg:gap-28">
+          <div className="flex gap-12 sm:gap-20 lg:gap-28">
           {/* Company */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">

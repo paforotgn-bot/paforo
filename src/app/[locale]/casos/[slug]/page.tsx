@@ -120,14 +120,14 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ loca
               </div>
 
               {c.gallery === 'full' ? (
-                <div className="my-12 flex flex-col items-center gap-8">
+                <div className="my-12 mx-auto flex max-w-2xl flex-col items-center gap-8">
                   {c.images?.map((img, i) => (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       key={i}
                       src={img}
                       alt={`${c.title} - captura ${i + 1}`}
-                      className="max-h-[420px] w-auto max-w-2xl rounded-2xl border border-border shadow-sm"
+                      className="max-h-[420px] w-auto max-w-full rounded-2xl border border-border shadow-sm"
                     />
                   ))}
                 </div>
