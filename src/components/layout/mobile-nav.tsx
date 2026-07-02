@@ -6,10 +6,11 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { LanguageSwitcher } from './language-switcher';
-import { SERVICES } from '@/lib/constants';
+import { SERVICES, LOCALES } from '@/lib/constants';
 import type { Locale } from '@/lib/constants';
 import type { Dictionary } from '@/types';
+
+const localeLabels: Record<Locale, string> = { es: 'ES', en: 'EN', ca: 'CA' };
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -28,6 +29,15 @@ export function MobileNav({ isOpen, onClose, navItems, locale, dict }: MobileNav
     href: `/${locale}/servicios/${service.slug[locale]}`,
     label: dict.services[serviceKeys[i]].title,
   }));
+
+  const currentLocale =
+    LOCALES.find((l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`) || locale;
+
+  const localizedPath = (target: Locale) => {
+    const segments = pathname.split('/');
+    segments[1] = target;
+    return segments.join('/');
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -80,11 +90,26 @@ export function MobileNav({ isOpen, onClose, navItems, locale, dict }: MobileNav
               </motion.div>
             ))}
 
-            <div className="mt-8 flex flex-col gap-4">
-              <LanguageSwitcher />
+            <div className="mt-8">
               <Button href={`/${locale}/contacto`} size="lg" className="w-full">
                 {dict.nav.cta}
               </Button>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center gap-6">
+              {LOCALES.map((l) => (
+                <Link
+                  key={l}
+                  href={localizedPath(l)}
+                  onClick={onClose}
+                  className={cn(
+                    'text-base font-semibold transition-colors',
+                    l === currentLocale ? 'text-foreground' : 'text-muted hover:text-foreground'
+                  )}
+                >
+                  {localeLabels[l]}
+                </Link>
+              ))}
             </div>
           </nav>
         </motion.div>
