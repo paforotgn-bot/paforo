@@ -19,6 +19,7 @@ const logos = [
   { name: 'Fontanet TGN', src: '/images/logos/fontanettgn.png', scale: 1.55 },
   { name: 'Neureduca', src: '/images/logos/neureduca.png', scale: 0.9 },
   { name: 'Rochnvibe', src: '/images/logos/rochnvibe.webp', scale: 0.9 },
+  { name: 'Ticket[in]', src: '/images/logos/ticketin.png', scale: 0.85 },
 ];
 
 export function LogosBar({ dict }: LogosBarProps) {
