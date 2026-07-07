@@ -39,10 +39,9 @@ export function Hero({ locale, dict }: HeroProps) {
         >
           <motion.h1
             variants={fadeInUp}
-            className="mt-8 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+            className="mt-8 text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            {dict.hero.title}
-            <br />
+            {dict.hero.title}{' '}
             <span className="gradient-text">{dict.hero.titleHighlight}</span>
           </motion.h1>
 
