@@ -1,0 +1,16 @@
+import puppeteer from 'puppeteer';
+const SP='C:/Users/pafor/AppData/Local/Temp/claude/C--Users-pafor-proyectos-paforo/27182f41-37be-4c33-9c37-d7ac5e2f0a24/scratchpad';
+const b=await puppeteer.launch({args:['--no-sandbox','--disable-dev-shm-usage']});
+const p=await b.newPage();
+await p.setViewport({width:1400,height:950});
+await p.goto('http://localhost:3100/servicios',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,900));
+await p.screenshot({path:SP+'/sv-index.png'});
+// abrir el segundo servicio
+const btns=await p.$$('button[aria-expanded]');
+await btns[1].click(); await new Promise(r=>setTimeout(r,900));
+await p.screenshot({path:SP+'/sv-open.png'});
+await p.goto('http://localhost:3100/servicios/desarrollo-web',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,800));
+await p.screenshot({path:SP+'/sv-detalle.png',fullPage:true});
+await b.close(); console.log('ok');

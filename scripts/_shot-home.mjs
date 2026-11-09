@@ -1,0 +1,11 @@
+import puppeteer from 'puppeteer';
+const SP='C:/Users/pafor/AppData/Local/Temp/claude/C--Users-pafor-proyectos-paforo/27182f41-37be-4c33-9c37-d7ac5e2f0a24/scratchpad';
+const b=await puppeteer.launch({args:['--no-sandbox','--disable-dev-shm-usage']});
+const p=await b.newPage();
+await p.setViewport({width:1500,height:900});
+await p.goto('http://localhost:3100/',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,2000));
+await p.screenshot({path:SP+'/home-final.png'});
+const n=await p.evaluate(()=>document.querySelectorAll('.work-card').length);
+console.log('tarjetas en el selector:',n);
+await b.close();

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input, Textarea, Select } from '@/components/ui/input';
 import type { Dictionary } from '@/types';
@@ -9,25 +9,12 @@ interface ContactFormProps {
   dict: Dictionary;
 }
 
-// Maps the ?servicio= URL param (set by the service / consultancy CTAs)
-// onto the form's service option values.
-const PARAM_TO_SERVICE: Record<string, string> = {
-  web: 'web',
-  software: 'software',
-  consultoria: 'consultancy',
-  consultancy: 'consultancy',
-};
 
 export function ContactForm({ dict }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [service, setService] = useState('');
 
-  // Pre-select the service from the ?servicio= param when arriving from a CTA.
-  useEffect(() => {
-    const param = new URLSearchParams(window.location.search).get('servicio');
-    if (param && PARAM_TO_SERVICE[param]) setService(PARAM_TO_SERVICE[param]);
-  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -83,8 +70,8 @@ export function ContactForm({ dict }: ContactFormProps) {
 
   if (status === 'success') {
     return (
-      <div className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center">
-        <p className="text-lg font-medium text-green-700">{dict.contact.success}</p>
+      <div className="rule py-10">
+        <p className="display-sm">{dict.contact.success}</p>
       </div>
     );
   }
@@ -141,11 +128,11 @@ export function ContactForm({ dict }: ContactFormProps) {
         error={errors.message}
         required
       />
-      <Button type="submit" size="lg" className="w-full" disabled={status === 'loading'}>
+      <Button type="submit" className="w-full" disabled={status === 'loading'}>
         {status === 'loading' ? dict.common.loading : dict.contact.submit}
       </Button>
       {status === 'error' && (
-        <p className="text-sm text-red-600 text-center">{dict.contact.error}</p>
+        <p className="label !text-accent">{dict.contact.error}</p>
       )}
     </form>
   );

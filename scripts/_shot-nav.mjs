@@ -1,0 +1,13 @@
+import puppeteer from 'puppeteer';
+const SP='C:/Users/pafor/AppData/Local/Temp/claude/C--Users-pafor-proyectos-paforo/27182f41-37be-4c33-9c37-d7ac5e2f0a24/scratchpad';
+const b=await puppeteer.launch({args:['--no-sandbox','--disable-dev-shm-usage']});
+const m=await b.newPage();
+await m.setViewport({width:390,height:844,deviceScaleFactor:2,isMobile:true});
+await m.goto('http://localhost:3100/servicios',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,900));
+await m.screenshot({path:SP+'/nav-cerrado.png',clip:{x:0,y:0,width:390,height:300}});
+await m.click('button[aria-expanded]');
+await new Promise(r=>setTimeout(r,800));
+await m.screenshot({path:SP+'/nav-abierto.png',clip:{x:0,y:0,width:390,height:400}});
+console.log('enlaces visibles al abrir:', await m.evaluate(()=>[...document.querySelectorAll('nav a')].filter(a=>a.offsetParent!==null).map(a=>a.textContent).join(' · ')));
+await b.close();

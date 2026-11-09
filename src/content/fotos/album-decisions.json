@@ -1,0 +1,623 @@
+{
+ "_comment": "Decisiones de álbum por candidato (revisión visual hoja a hoja). status: album | descarte | trabajo. merge: ids de candidatos que se funden en este álbum. ask: duda pendiente de confirmar con Pablo.",
+ "decisions": [
+  {
+   "cand": 1,
+   "status": "album",
+   "title": "Viaje en familia",
+   "place": "",
+   "tags": [
+    "familia",
+    "españa"
+   ],
+   "ask": "No recuerdas el sitio: patios con macetas y calleja de flores (¿Córdoba?)"
+  },
+  {
+   "cand": 2,
+   "status": "album",
+   "title": "Bruselas en familia",
+   "place": "Bruselas, Bélgica",
+   "tags": [
+    "familia",
+    "ciudad",
+    "europa"
+   ]
+  },
+  {
+   "cand": 3,
+   "status": "album",
+   "title": "Primera excursión: sendero El Ceibo",
+   "place": "Costa Rica",
+   "tags": [
+    "costa rica",
+    "naturaleza"
+   ]
+  },
+  {
+   "cand": 4,
+   "status": "album",
+   "title": "La Fortuna y rafting",
+   "place": "La Fortuna, Costa Rica",
+   "tags": [
+    "costa rica",
+    "aventura"
+   ]
+  },
+  {
+   "cand": 5,
+   "status": "album",
+   "title": "La Mata y Puerto Viejo",
+   "place": "Puerto Viejo de Talamanca, Costa Rica",
+   "tags": [
+    "costa rica",
+    "playa"
+   ]
+  },
+  {
+   "cand": 6,
+   "status": "album",
+   "title": "Hacienda La Chimba",
+   "place": "San José, Costa Rica",
+   "tags": [
+    "costa rica"
+   ]
+  },
+  {
+   "cand": 7,
+   "status": "album",
+   "title": "Tamarindo: surf",
+   "place": "Tamarindo, Costa Rica",
+   "tags": [
+    "costa rica",
+    "playa",
+    "surf"
+   ]
+  },
+  {
+   "cand": 8,
+   "status": "album",
+   "title": "Carnaval en San José",
+   "place": "San José, Costa Rica",
+   "tags": [
+    "costa rica",
+    "fiesta"
+   ]
+  },
+  {
+   "cand": 9,
+   "status": "album",
+   "title": "Río Celeste y Tortuguero",
+   "place": "Costa Rica",
+   "tags": [
+    "costa rica",
+    "naturaleza"
+   ]
+  },
+  {
+   "cand": 10,
+   "status": "album",
+   "title": "Bocas del Toro",
+   "place": "Bocas del Toro, Panamá",
+   "tags": [
+    "panamá",
+    "playa",
+    "snorkel"
+   ]
+  },
+  {
+   "cand": 11,
+   "status": "album",
+   "title": "Montezuma y Santa Teresa",
+   "place": "Península de Nicoya, Costa Rica",
+   "tags": [
+    "costa rica",
+    "playa"
+   ]
+  },
+  {
+   "cand": 12,
+   "status": "album",
+   "title": "Isla Mujeres y Chichén Itzá",
+   "place": "Yucatán, México",
+   "tags": [
+    "méxico",
+    "playa",
+    "ruinas"
+   ]
+  },
+  {
+   "cand": 13,
+   "status": "album",
+   "title": "Ciudad de México",
+   "place": "Ciudad de México",
+   "tags": [
+    "méxico",
+    "ciudad"
+   ]
+  },
+  {
+   "cand": 14,
+   "status": "album",
+   "title": "Puerto Viejo en bici",
+   "place": "Puerto Viejo de Talamanca, Costa Rica",
+   "tags": [
+    "costa rica",
+    "playa"
+   ]
+  },
+  {
+   "cand": 15,
+   "status": "album",
+   "title": "Nueva York, fin de año",
+   "place": "Nueva York, EE. UU.",
+   "tags": [
+    "ciudad",
+    "nochevieja"
+   ]
+  },
+  {
+   "cand": 16,
+   "status": "album",
+   "title": "Budapest",
+   "place": "Budapest, Hungría",
+   "tags": [
+    "ciudad",
+    "europa"
+   ]
+  },
+  {
+   "cand": 17,
+   "status": "trabajo",
+   "title": "Curro en la Costa Brava",
+   "place": "Costa Brava",
+   "tags": [
+    "curro"
+   ],
+   "ask": "¿Quieres un álbum de curros (barras/eventos) o fuera del álbum personal?"
+  },
+  {
+   "cand": 18,
+   "status": "merged",
+   "title": "Llegada a Seúl",
+   "place": "Seúl, Corea del Sur",
+   "tags": [
+    "corea",
+    "ciudad"
+   ]
+  },
+  {
+   "cand": 19,
+   "status": "album",
+   "title": "Corea",
+   "place": "Corea del Sur",
+   "tags": [
+    "corea",
+    "intercambio"
+   ],
+   "merge": [
+    18,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+   ],
+   "spanFrom": "2023-08-31",
+   "spanTo": "2023-12-22"
+  },
+  {
+   "cand": 20,
+   "status": "merged",
+   "title": "Busan",
+   "place": "Busan, Corea del Sur",
+   "tags": [
+    "corea",
+    "ciudad"
+   ]
+  },
+  {
+   "cand": 21,
+   "status": "merged",
+   "title": "Monte en otoño",
+   "place": "Seúl, Corea del Sur",
+   "tags": [
+    "corea",
+    "montaña"
+   ]
+  },
+  {
+   "cand": 22,
+   "status": "merged",
+   "title": "Hanbok y tiro con arco",
+   "place": "Corea del Sur",
+   "tags": [
+    "corea",
+    "cultura",
+    "uni"
+   ]
+  },
+  {
+   "cand": 23,
+   "status": "merged",
+   "title": "Gyeongbokgung y Nami Island",
+   "place": "Corea del Sur",
+   "tags": [
+    "corea",
+    "otoño"
+   ]
+  },
+  {
+   "cand": 24,
+   "status": "merged",
+   "title": "Costa este de Corea",
+   "place": "Corea del Sur",
+   "tags": [
+    "corea",
+    "playa"
+   ]
+  },
+  {
+   "cand": 25,
+   "status": "merged",
+   "title": "Esquí en Corea",
+   "place": "Corea del Sur",
+   "tags": [
+    "corea",
+    "nieve"
+   ]
+  },
+  {
+   "cand": 26,
+   "status": "merged",
+   "title": "Atardeceres en la costa",
+   "place": "Corea del Sur",
+   "tags": [
+    "corea",
+    "invierno"
+   ]
+  },
+  {
+   "cand": 27,
+   "status": "album",
+   "title": "Krabi y Phi Phi",
+   "place": "Krabi, Tailandia",
+   "tags": [
+    "tailandia",
+    "playa"
+   ]
+  },
+  {
+   "cand": 28,
+   "status": "album",
+   "title": "Koh Samui y Ang Thong",
+   "place": "Koh Samui, Tailandia",
+   "tags": [
+    "tailandia",
+    "playa"
+   ]
+  },
+  {
+   "cand": 29,
+   "status": "album",
+   "title": "Japón",
+   "place": "Japón",
+   "tags": [
+    "japón",
+    "ciudad",
+    "templos"
+   ]
+  },
+  {
+   "cand": 30,
+   "status": "descarte",
+   "reason": "selfies de espejo y día a día",
+   "to": "dia"
+  },
+  {
+   "cand": 31,
+   "status": "trabajo",
+   "title": "Curro en la nieve",
+   "place": "Pirineo",
+   "tags": [
+    "curro"
+   ]
+  },
+  {
+   "cand": 32,
+   "status": "descarte",
+   "reason": "selfies de espejo",
+   "to": "dia"
+  },
+  {
+   "cand": 33,
+   "status": "descarte",
+   "reason": "selfies de espejo con alguna foto de cabaña",
+   "to": "dia"
+  },
+  {
+   "cand": 34,
+   "status": "album",
+   "title": "Verano por el norte de Europa",
+   "place": "",
+   "tags": [
+    "viaje",
+    "europa"
+   ],
+   "ask": "Julio 2024: Báltico, vacas, skatepark y edificio neoclásico. ¿Qué país/ciudad? (¿Dinamarca, Alemania?)"
+  },
+  {
+   "cand": 35,
+   "status": "descarte",
+   "reason": "selfies de espejo y fotos sueltas",
+   "to": "dia"
+  },
+  {
+   "cand": 36,
+   "status": "descarte",
+   "reason": "fotos de precios y material de obra",
+   "to": "fuera"
+  },
+  {
+   "cand": 37,
+   "status": "album",
+   "title": "Cala y curro de verano",
+   "place": "Costa Brava",
+   "tags": [
+    "verano",
+    "playa"
+   ],
+   "ask": "¿Separo la cala del curro o lo dejo junto?"
+  },
+  {
+   "cand": 38,
+   "status": "album",
+   "title": "Santa Tecla",
+   "place": "Tarragona",
+   "tags": [
+    "fiesta",
+    "tarragona"
+   ],
+   "ask": "¿Es Santa Tecla de Tarragona? Hay fotos de obra mezcladas que quitaría."
+  },
+  {
+   "cand": 39,
+   "status": "album",
+   "title": "Ruta de motos",
+   "place": "",
+   "tags": [
+    "motos",
+    "amigos"
+   ]
+  },
+  {
+   "cand": 40,
+   "status": "album",
+   "title": "La boda de Armelle",
+   "place": "París, Francia",
+   "tags": [
+    "boda",
+    "parís",
+    "familia"
+   ]
+  },
+  {
+   "cand": 41,
+   "status": "album",
+   "title": "Edimburgo",
+   "place": "Edimburgo, Escocia",
+   "tags": [
+    "ciudad",
+    "europa"
+   ]
+  },
+  {
+   "cand": 42,
+   "status": "album",
+   "title": "Montserrat",
+   "place": "Montserrat, Barcelona",
+   "tags": [
+    "montaña",
+    "pareja"
+   ]
+  },
+  {
+   "cand": 43,
+   "status": "album",
+   "title": "Esquí en el Pirineo",
+   "place": "Pirineo",
+   "tags": [
+    "nieve",
+    "esquí"
+   ]
+  },
+  {
+   "cand": 44,
+   "status": "album",
+   "title": "Pirineo nevado",
+   "place": "Francia",
+   "tags": [
+    "nieve",
+    "montaña"
+   ]
+  },
+  {
+   "cand": 45,
+   "status": "album",
+   "title": "Concierto de Travis Scott",
+   "place": "Barcelona",
+   "tags": [
+    "concierto",
+    "barcelona"
+   ]
+  },
+  {
+   "cand": 46,
+   "status": "trabajo",
+   "title": "Curro: barra en el domo",
+   "place": "",
+   "tags": [
+    "curro"
+   ]
+  },
+  {
+   "cand": 47,
+   "status": "album",
+   "title": "Albania",
+   "place": "Albania",
+   "tags": [
+    "albania",
+    "playa",
+    "verano"
+   ]
+  },
+  {
+   "cand": 48,
+   "status": "album",
+   "title": "Puerto Rico",
+   "place": "Puerto Rico",
+   "tags": [
+    "caribe",
+    "playa"
+   ]
+  },
+  {
+   "cand": 49,
+   "status": "album",
+   "title": "Vietnam",
+   "place": "Vietnam",
+   "tags": [
+    "vietnam",
+    "viaje"
+   ],
+   "merge": [
+    50
+   ]
+  },
+  {
+   "cand": 51,
+   "status": "album",
+   "title": "Auroras boreales en Tromsø",
+   "place": "Tromsø, Noruega",
+   "tags": [
+    "invierno",
+    "auroras"
+   ]
+  },
+  {
+   "cand": 52,
+   "status": "album",
+   "title": "Escapada a Londres",
+   "place": "Londres, Reino Unido",
+   "tags": [
+    "ciudad",
+    "pareja"
+   ]
+  },
+  {
+   "cand": 53,
+   "status": "album",
+   "title": "Marató de Barcelona",
+   "place": "Barcelona",
+   "tags": [
+    "running",
+    "maratón"
+   ]
+  },
+  {
+   "cand": 54,
+   "status": "album",
+   "title": "Excursión por la costa",
+   "place": "",
+   "tags": [
+    "costa",
+    "pareja"
+   ],
+   "ask": "Marzo 2026, camino de ronda junto al mar: ¿dónde fue?"
+  },
+  {
+   "cand": 55,
+   "status": "descarte",
+   "reason": "planificación del viaje y selfies",
+   "to": "dia"
+  },
+  {
+   "cand": 56,
+   "status": "descarte",
+   "reason": "papeleo y albaranes",
+   "to": "borrar"
+  },
+  {
+   "cand": 57,
+   "status": "descarte",
+   "reason": "documentos firmados",
+   "to": "borrar"
+  },
+  {
+   "cand": 58,
+   "status": "album",
+   "title": "Perú",
+   "place": "Perú",
+   "tags": [
+    "perú",
+    "viaje"
+   ],
+   "merge": [
+    59
+   ],
+   "spanFrom": "2026-05-10",
+   "spanTo": "2026-05-30"
+  },
+  {
+   "cand": 60,
+   "status": "descarte",
+   "reason": "documentos y contratos",
+   "to": "borrar"
+  }
+ ],
+ "pool": {
+  "_comment": "Clasificación de los grupos sueltos tras revisarlos por hojas de contacto. curro = barra/catering/eventos; descarte = pantallas, papeleo y fotos de obra; el resto va a 'Día a día <año>'.",
+  "curro": [
+   84,
+   87,
+   88,
+   89,
+   91,
+   92,
+   93,
+   151,
+   183,
+   229,
+   239,
+   244,
+   292
+  ],
+  "borrar": [
+   24,
+   60,
+   81,
+   82,
+   83,
+   203,
+   247,
+   250,
+   251,
+   269,
+   277,
+   278,
+   279,
+   285,
+   296,
+   297,
+   299,
+   300
+  ],
+  "fuera": [
+   148,
+   149,
+   150,
+   177
+  ]
+ }
+}

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function PrivacidadPage() {
   return (
     <Section>
-      <div className="mx-auto max-w-3xl prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-a:text-violet prose-strong:text-foreground prose-li:text-muted">
+      <div className="mx-auto max-w-3xl prose prose-invert prose-legal">
         <h1>Política de privacidad</h1>
         <p>
           En <strong>Paforo</strong> nos tomamos en serio la privacidad de las personas que visitan nuestra

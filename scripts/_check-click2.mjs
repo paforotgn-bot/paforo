@@ -1,0 +1,27 @@
+import puppeteer from 'puppeteer';
+const b=await puppeteer.launch({args:['--no-sandbox','--disable-dev-shm-usage']});
+const p=await b.newPage();
+await p.setViewport({width:1500,height:900});
+await p.goto('http://localhost:3100/',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,2000));
+const box=await p.evaluate(()=>{const c=document.querySelectorAll('.work-card')[2];const r=c.getBoundingClientRect();
+  return {x:Math.round(r.x+r.width/2),y:Math.round(r.y+r.height/2),href:c.getAttribute('href')};});
+console.log('objetivo:',box.href);
+await p.mouse.move(box.x,box.y);
+await new Promise(r=>setTimeout(r,250));
+await p.mouse.down(); await new Promise(r=>setTimeout(r,90)); await p.mouse.up();
+await new Promise(r=>setTimeout(r,1800));
+console.log('clic humano  →', await p.evaluate(()=>location.pathname));
+await p.goto('http://localhost:3100/',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,1800));
+const c2=await p.evaluate(()=>{const c=document.querySelectorAll('.work-card')[2];const r=c.getBoundingClientRect();return {x:Math.round(r.x+r.width/2),y:Math.round(r.y+r.height/2)};});
+await p.mouse.move(c2.x,c2.y); await new Promise(r=>setTimeout(r,150));
+await p.mouse.down();
+for(let i=1;i<=12;i++){await p.mouse.move(c2.x-i*14,c2.y-i*7);await new Promise(r=>setTimeout(r,16));}
+await p.mouse.up(); await new Promise(r=>setTimeout(r,1500));
+console.log('tras arrastrar →', await p.evaluate(()=>location.pathname));
+const t1=await p.evaluate(()=>document.querySelector('.work-card').style.transform);
+await p.mouse.wheel({deltaY:600}); await new Promise(r=>setTimeout(r,600));
+const t2=await p.evaluate(()=>document.querySelector('.work-card').style.transform);
+console.log('la rueda mueve el lienzo:', t1!==t2, '| scrollY:', await p.evaluate(()=>scrollY));
+await b.close();

@@ -1,5 +1,36 @@
 import { cn } from '@/lib/utils';
 
+/*
+  Campos a una línea: sin caja, sin esquinas redondeadas, sin anillo de foco
+  de color. Sólo la regla inferior, que se enciende al enfocar.
+*/
+const field =
+  'w-full border-0 border-b border-line bg-transparent px-0 py-3 text-paper placeholder:text-faint focus:border-paper focus:outline-none focus:ring-0 transition-colors';
+
+const invalid = 'border-accent focus:border-accent';
+
+function Field({
+  label,
+  error,
+  id,
+  children,
+}: {
+  label: string;
+  error?: string;
+  id?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="space-y-1">
+      <label htmlFor={id} className="label block">
+        {label}
+      </label>
+      {children}
+      {error && <p className="label !text-accent">{error}</p>}
+    </div>
+  );
+}
+
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   error?: string;
@@ -7,21 +38,9 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export function Input({ label, error, className, id, ...props }: InputProps) {
   return (
-    <div className="space-y-1.5">
-      <label htmlFor={id} className="block text-sm font-medium text-foreground">
-        {label}
-      </label>
-      <input
-        id={id}
-        className={cn(
-          'w-full rounded-lg border border-border bg-card px-4 py-3 text-foreground placeholder:text-muted/50 focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors',
-          error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
-          className
-        )}
-        {...props}
-      />
-      {error && <p className="text-sm text-red-500">{error}</p>}
-    </div>
+    <Field label={label} error={error} id={id}>
+      <input id={id} className={cn(field, error && invalid, className)} {...props} />
+    </Field>
   );
 }
 
@@ -32,21 +51,13 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
 
 export function Textarea({ label, error, className, id, ...props }: TextareaProps) {
   return (
-    <div className="space-y-1.5">
-      <label htmlFor={id} className="block text-sm font-medium text-foreground">
-        {label}
-      </label>
+    <Field label={label} error={error} id={id}>
       <textarea
         id={id}
-        className={cn(
-          'w-full rounded-lg border border-border bg-card px-4 py-3 text-foreground placeholder:text-muted/50 focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors min-h-[120px] resize-y',
-          error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
-          className
-        )}
+        className={cn(field, 'min-h-[140px] resize-y', error && invalid, className)}
         {...props}
       />
-      {error && <p className="text-sm text-red-500">{error}</p>}
-    </div>
+    </Field>
   );
 }
 
@@ -58,26 +69,14 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 
 export function Select({ label, error, className, id, options, ...props }: SelectProps) {
   return (
-    <div className="space-y-1.5">
-      <label htmlFor={id} className="block text-sm font-medium text-foreground">
-        {label}
-      </label>
-      <select
-        id={id}
-        className={cn(
-          'w-full rounded-lg border border-border bg-card px-4 py-3 text-foreground focus:border-violet focus:outline-none focus:ring-1 focus:ring-violet transition-colors',
-          error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
-          className
-        )}
-        {...props}
-      >
+    <Field label={label} error={error} id={id}>
+      <select id={id} className={cn(field, error && invalid, className)} {...props}>
         {options.map((opt) => (
-          <option key={opt.value} value={opt.value}>
+          <option key={opt.value} value={opt.value} className="bg-ink text-paper">
             {opt.label}
           </option>
         ))}
       </select>
-      {error && <p className="text-sm text-red-500">{error}</p>}
-    </div>
+    </Field>
   );
 }

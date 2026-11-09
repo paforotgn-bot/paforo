@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function TerminosPage() {
   return (
     <Section>
-      <div className="mx-auto max-w-3xl prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-a:text-violet prose-strong:text-foreground prose-li:text-muted">
+      <div className="mx-auto max-w-3xl prose prose-invert prose-legal">
         <h1>Términos y condiciones</h1>
         <p>
           El uso de este sitio web implica la aceptación de los presentes términos y condiciones. Te

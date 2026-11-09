@@ -1,0 +1,13 @@
+import puppeteer from 'puppeteer';
+const SP='C:/Users/pafor/AppData/Local/Temp/claude/C--Users-pafor-proyectos-paforo/27182f41-37be-4c33-9c37-d7ac5e2f0a24/scratchpad';
+const b=await puppeteer.launch({args:['--no-sandbox','--disable-dev-shm-usage']});
+const p=await b.newPage();
+await p.setViewport({width:1500,height:950});
+await p.goto('http://localhost:3100/',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,1500));
+await p.mouse.move(640,430); await new Promise(r=>setTimeout(r,800));
+await p.screenshot({path:SP+'/nx-home.png'});
+await p.goto('http://localhost:3100/trabajo/no-waltz',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,700));
+await p.screenshot({path:SP+'/nx-proj.png'});
+await b.close(); console.log('ok');

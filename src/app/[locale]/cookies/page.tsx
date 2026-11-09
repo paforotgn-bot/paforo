@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function CookiesPage() {
   return (
     <Section>
-      <div className="mx-auto max-w-3xl prose prose-lg prose-headings:text-foreground prose-p:text-muted prose-a:text-violet prose-strong:text-foreground prose-li:text-muted">
+      <div className="mx-auto max-w-3xl prose prose-invert prose-legal">
         <h1>Política de cookies</h1>
         <p>
           Una cookie es un pequeño archivo que se guarda en tu dispositivo al visitar una web. Aquí te

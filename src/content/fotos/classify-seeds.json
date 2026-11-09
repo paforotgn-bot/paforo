@@ -1,0 +1,7 @@
+{
+ "_comment": "Clases detectadas por parecido con fotos semilla. gimnasio = selfies de espejo (progreso); papeles = contratos, partes y albaranes fotografiados.",
+ "classes": {
+  "gimnasio": { "t": 0.76, "seeds": [4295, 4324, 4336, 4271, 4281, 4294, 4242, 4255, 4264] },
+  "papeles":  { "t": 0.80, "seeds": [6778, 6784, 6833, 6435, 6724, 6759, 7000] }
+ }
+}

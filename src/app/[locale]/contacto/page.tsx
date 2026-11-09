@@ -1,39 +1,57 @@
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { generatePageMetadata } from '@/lib/seo/metadata';
 import { Section } from '@/components/ui/section';
-import { ContactBlock } from '@/components/sections/contact-block';
-import type { Locale } from '@/lib/constants';
+import { ContactForm } from '@/components/forms/contact-form';
+import { COPY } from '@/content/copy';
+import { NAP, type Locale } from '@/lib/constants';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
+  const l = locale as Locale;
+
   return generatePageMetadata({
-    title: locale === 'en' ? 'Contact' : locale === 'ca' ? 'Contacte' : 'Contacto',
-    description: locale === 'en'
-      ? 'Contact Paforo. Tell us about your project and we will get back to you within 24 hours.'
-      : 'Contacta con Paforo. Cuéntanos tu proyecto y te responderemos en menos de 24 horas.',
-    locale: locale as Locale,
+    title: COPY.contact.title[l],
+    description: COPY.contact.lede[l],
+    locale: l,
     path: '/contacto',
   });
 }
 
-export default async function ContactoPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ContactoPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
-  const dict = await getDictionary(locale as Locale);
+  const l = locale as Locale;
+  const dict = await getDictionary(l);
 
   return (
-    <>
-      <Section>
-        <div className="mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-              {dict.contact.title}
-            </h1>
-            <p className="mt-4 text-lg text-muted">{dict.contact.subtitle}</p>
-          </div>
+    <Section>
+      <div className="grid gap-12 md:grid-cols-[minmax(0,32ch)_minmax(0,52ch)] md:gap-20">
+        <div>
+          <h1 className="display-sm">{COPY.contact.title[l]}</h1>
+          <p className="lede mt-6">{COPY.contact.lede[l]}</p>
 
-          <ContactBlock locale={locale as Locale} dict={dict} />
+          <div className="mt-10 flex flex-col gap-2">
+            <a href={`mailto:${NAP.email}`} className="label hover:!text-paper">
+              {NAP.email}
+            </a>
+            <a
+              href={`tel:${NAP.phone.replace(/\s/g, '')}`}
+              className="label hover:!text-paper"
+            >
+              {NAP.phone}
+            </a>
+          </div>
         </div>
-      </Section>
-    </>
+
+        <ContactForm dict={dict} />
+      </div>
+    </Section>
   );
 }

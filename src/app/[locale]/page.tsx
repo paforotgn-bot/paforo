@@ -1,66 +1,74 @@
-import { getDictionary } from '@/lib/i18n/dictionaries';
 import { generatePageMetadata } from '@/lib/seo/metadata';
-import { Hero } from '@/components/sections/hero';
-import { LogosBar } from '@/components/sections/logos-bar';
-import { CasesCarousel } from '@/components/sections/cases-carousel';
-import { ServicesOverview } from '@/components/sections/services-overview';
-import { Process } from '@/components/sections/process';
-import { CTASection } from '@/components/sections/cta-section';
-import { ContactBlock } from '@/components/sections/contact-block';
-import { Section, SectionHeader } from '@/components/ui/section';
-import { getCaseStudies } from '@/lib/content/cases';
-import type { Locale } from '@/lib/constants';
+import { WorkIndex } from '@/components/work/work-index';
+import { LogoMarquee } from '@/components/sections/logo-marquee';
+import { getProjects } from '@/lib/content/projects';
+import { getShots } from '@/lib/content/media';
+import { COPY } from '@/content/copy';
+import { type Locale } from '@/lib/constants';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
-  const titles: Record<string, string> = {
-    es: 'Agencia Digital | Desarrollo Web y Software',
-    en: 'Digital Agency | Web & Software Development',
-    ca: 'Agència Digital | Desenvolupament Web i Software',
-  };
-  const descriptions: Record<string, string> = {
-    es: 'Paforo es una agencia digital especializada en desarrollo web y software a medida. Resultados medibles para empresas.',
-    en: 'Paforo is a digital agency specialized in web development and custom software. Measurable results for businesses.',
-    ca: 'Paforo és una agència digital especialitzada en desenvolupament web i software a mida. Resultats mesurables per a empreses.',
-  };
+  const l = locale as Locale;
 
   return generatePageMetadata({
-    title: titles[locale] || titles.es,
-    description: descriptions[locale] || descriptions.es,
-    locale: locale as Locale,
+    title: `Paforo — ${COPY.hero.line1[l]} ${COPY.hero.line2[l]}`,
+    description: COPY.hero.lede[l],
+    locale: l,
     path: '',
   });
 }
 
-export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
-  const dict = await getDictionary(locale as Locale);
+  const l = locale as Locale;
+  const projects = getProjects();
 
-  const cases = getCaseStudies(locale as Locale).map((c) => ({
-    slug: c.slug,
-    title: c.title,
-    description: c.description,
-    services: c.services,
-    image: c.cardImage ?? c.image ?? (c.images && c.images[0]) ?? null,
-    video: c.cardVideo ?? null,
-    imagePosition: c.imagePosition ?? null,
-    imageFit: c.imageFit ?? null,
-  }));
+  // Al pasar el ratón sólo se ve la portada: la primera pieza de cada
+  // proyecto. El resto vive dentro de su ficha.
+  const covers = Object.fromEntries(
+    projects.map((p) => [p.slug, getShots(p.slug)[0]])
+  );
 
   return (
     <>
-      <Hero locale={locale as Locale} dict={dict} />
-      <LogosBar dict={dict} />
-      <ServicesOverview locale={locale as Locale} dict={dict} />
-      <Process dict={dict} />
-      <CasesCarousel locale={locale as Locale} dict={dict} cases={cases} />
-      <CTASection locale={locale as Locale} dict={dict} />
-      <Section id="contacto">
-        <SectionHeader title={dict.contact.title} subtitle={dict.contact.subtitle} />
-        <div className="mx-auto max-w-5xl">
-          <ContactBlock locale={locale as Locale} dict={dict} />
+      {/* Hero: una frase, grande, y nada más. Sin botones ni badge. */}
+      <section className="flex min-h-svh flex-col justify-end px-5 pb-14 pt-32 md:px-10 md:pb-20">
+        <h1 className="display max-w-[18ch]">
+          <span className="rise block" style={{ animationDelay: '0.05s' }}>
+            {COPY.hero.line1[l]}
+          </span>
+          <span
+            className="rise block text-dim"
+            style={{ animationDelay: '0.18s' }}
+          >
+            {COPY.hero.line2[l]}
+          </span>
+        </h1>
+
+        {/* Banda de clientes: la prueba de que esto existe fuera de la web. */}
+        <div className="rise -mx-5 mt-16 md:-mx-10 md:mt-20" style={{ animationDelay: '0.32s' }}>
+          <LogoMarquee />
         </div>
-      </Section>
+      </section>
+
+      {/* Índice de trabajo: el plato fuerte. */}
+      <section id="trabajo" className="px-5 pb-24 md:px-10 md:pb-32">
+        <div className="mb-8 flex items-baseline justify-between">
+          <h2 className="label">{COPY.work.title[l]}</h2>
+          <p className="label hidden md:block">{COPY.work.note[l]}</p>
+        </div>
+
+        <WorkIndex projects={projects} locale={l} covers={covers} />
+      </section>
+
     </>
   );
 }

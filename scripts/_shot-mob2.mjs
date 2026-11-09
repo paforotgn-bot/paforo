@@ -1,0 +1,12 @@
+import puppeteer from 'puppeteer';
+const SP='C:/Users/pafor/AppData/Local/Temp/claude/C--Users-pafor-proyectos-paforo/27182f41-37be-4c33-9c37-d7ac5e2f0a24/scratchpad';
+const b=await puppeteer.launch({args:['--no-sandbox','--disable-dev-shm-usage','--autoplay-policy=no-user-gesture-required']});
+const m=await b.newPage();
+await m.setViewport({width:390,height:844,deviceScaleFactor:2,isMobile:true});
+await m.goto('http://localhost:3100/trabajo/skeels',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,1200));
+await m.screenshot({path:SP+'/mob-ficha.png'});
+await m.goto('http://localhost:3100/',{waitUntil:'networkidle0'});
+await new Promise(r=>setTimeout(r,1500));
+await m.screenshot({path:SP+'/mob-home.png'});
+await b.close(); console.log('ok');

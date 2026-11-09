@@ -4,8 +4,7 @@ import { cn } from '@/lib/utils';
 interface ButtonProps {
   children: React.ReactNode;
   href?: string;
-  variant?: 'primary' | 'secondary' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: 'primary' | 'secondary';
   className?: string;
   onClick?: () => void;
   type?: 'button' | 'submit';
@@ -13,34 +12,23 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary:
-    'bg-gradient-to-r from-violet to-cyan text-white hover:opacity-90 shadow-lg shadow-violet/15',
-  secondary:
-    'border border-border bg-card text-foreground hover:bg-elevated hover:border-muted',
-  ghost: 'text-muted hover:text-foreground hover:bg-elevated',
-};
-
-const sizes = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-3 text-base',
-  lg: 'px-8 py-4 text-lg',
+  primary: 'bg-paper text-ink hover:bg-white',
+  secondary: 'border border-line text-paper hover:border-dim',
 };
 
 export function Button({
   children,
   href,
   variant = 'primary',
-  size = 'md',
   className,
   onClick,
   type = 'button',
   disabled,
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 cursor-pointer',
+    'label inline-flex items-center justify-center px-6 py-4 !text-inherit transition-colors duration-200',
     variants[variant],
-    sizes[size],
-    disabled && 'opacity-50 cursor-not-allowed',
+    disabled && 'cursor-not-allowed opacity-40',
     className
   );
 
